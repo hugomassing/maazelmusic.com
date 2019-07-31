@@ -7,7 +7,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "start": "next export"
+    "export": "next export"
   },
   "keywords": [],
   "author": "",
