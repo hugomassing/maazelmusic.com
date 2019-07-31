@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from '../components/Link';
 import { useRouter } from 'next/router';
 
 import styled from 'styled-components'
@@ -54,7 +54,7 @@ const Header = () => {
   return (<Container>
       <Link href="/">
         <A>
-          <Img src="/static/Logo.svg" alt="logo"/>
+          <Img src="static/Logo.svg" alt="logo"/>
         </A>
       </Link>
       <Navigation>

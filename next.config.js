@@ -1,8 +1,9 @@
+const isProduction = process.env.NODE_ENV === 'production';
+
 module.exports = {
-    exportPathMap: function() {
-      return {
-        '/': { page: '/' }
-      };
-    },
-    assetPrefix: process.env.NODE_ENV === 'production' ? '/maazelmusic.com' : '',
-  };
+  assetPrefix: isProduction ? '/maazelmusic.com' : '',
+  publicRuntimeConfig: {
+    // used in '/components/Link.js/', for more details go to the component itself
+    linkPrefix: isProduction ? '/maazelmusic.com' : ''
+  }
+};
