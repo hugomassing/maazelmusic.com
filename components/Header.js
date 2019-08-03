@@ -2,9 +2,11 @@ import Link from '../components/Link';
 import { useRouter } from 'next/router';
 
 import styled from 'styled-components'
+import config from '../config/config'
 
 const Container = styled.div`
-  height: 40px;
+  height: ${config.headerSize};
+  flex-grow: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -15,12 +17,17 @@ const Navigation = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  margin-right: 30px;
 `
+const Logo = styled.a`
+  margin-left: 30px;
+`
+
 const A = styled.a`
   margin: 10px 20px;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
   cursor: pointer;
   position: relative;
   &:after {
@@ -41,10 +48,9 @@ const A = styled.a`
       width: 60%;
    }
   }
-  
 `
-const Img = styled.img`
-  width: 100px;
+const Img = styled.img`    
+  height: 25px;
 `
 
 const Header = () => {
@@ -53,15 +59,15 @@ const Header = () => {
 
   return (<Container>
       <Link href="/">
-        <A>
+        <Logo>
           <Img src="static/Logo.svg" alt="logo"/>
-        </A>
+        </Logo>
       </Link>
       <Navigation>
         <Link href="/">
           <A selected={pathname === '/'}>Home</A>
         </Link>
-        {navigationList.map(navigationItem => (<Link href={'/' + navigationItem}>
+        {navigationList.map(navigationItem => (<Link key={navigationItem} href={'/' + navigationItem}>
           <A selected={pathname === '/' + navigationItem}>{navigationItem}</A>
         </Link>))}
       </Navigation>

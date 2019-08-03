@@ -1,17 +1,30 @@
 import Head from 'next/head'
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
+import config from '../config/config'
 
 import Header from './Header';
+import Footer from './Footer';
 
 const GlobalStyles = createGlobalStyle`
   body {
     margin: 0;
-    min-height: 100%;
+    min-height: 100vh;
     width: 100%;
     font-family: 'Roboto', sans-serif;
   }
 `
-;
+
+const Container = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+`
+
+const Content = styled.div`
+  display: flex;
+  min-height: calc(100vh - ${config.headerSize} - ${config.footerSize});
+`;
+
 const Layout = props => (
   <div>
     <Head>
@@ -20,8 +33,13 @@ const Layout = props => (
       <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet" />
     </Head>
     <GlobalStyles />
-    <Header />
-    {props.children}
+    <Container>
+      <Header />
+      <Content>
+        {props.children}
+      </Content>
+      <Footer />
+    </Container>
   </div>
 );
 
