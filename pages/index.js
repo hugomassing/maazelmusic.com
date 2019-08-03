@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import Router from 'next/router'
 import Layout from '../components/Layout'
 import Button from '../components/Button'
-import config from '../config/config'
+import config from '../constants/config'
 
 const Container = styled.div`
   width: 100%;
@@ -40,7 +40,7 @@ const Tagline = styled.span`
 `
 
 const Home = () => (
-    <Layout>
+    <Layout fullWidth>
       <Container>
         <Overlay>
           <Infos>
@@ -50,7 +50,6 @@ const Home = () => (
             <Tagline>
               {config.tagline}
             </Tagline>
-            
             <Button onClick={() => Router.push(config.actionButtonUrl)}>
               {config.actionButtonLabel}
             </Button> 

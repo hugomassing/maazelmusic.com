@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styled, { createGlobalStyle } from 'styled-components'
-import config from '../config/config'
+import config from '../constants/config'
 
 import Header from './Header';
 import Footer from './Footer';
@@ -23,6 +23,8 @@ const Container = styled.div`
 const Content = styled.div`
   display: flex;
   min-height: calc(100vh - ${config.headerSize} - ${config.footerSize});
+  width: ${props => props.fullWidth ? '100%' : '1200px'};
+  margin: 0 auto;
 `;
 
 const Layout = props => (
@@ -35,7 +37,7 @@ const Layout = props => (
     <GlobalStyles />
     <Container>
       <Header />
-      <Content>
+      <Content {...props}>
         {props.children}
       </Content>
       <Footer />

@@ -2,7 +2,7 @@ import Link from '../components/Link';
 import { useRouter } from 'next/router';
 
 import styled from 'styled-components'
-import config from '../config/config'
+import config from '../constants/config'
 
 const Container = styled.div`
   height: ${config.footerSize};
