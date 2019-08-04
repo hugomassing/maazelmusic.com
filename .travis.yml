@@ -4,3 +4,11 @@ node_js:
 cache:
   directories:
     - "node_modules"
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  local_dir: out
+  on:
+    branch: master
