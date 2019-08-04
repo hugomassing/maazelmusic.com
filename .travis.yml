@@ -4,6 +4,8 @@ node_js:
 cache:
   directories:
     - "node_modules"
+script: yarn export
+before_deploy : touch out/.nojekyll
 deploy:
   provider: pages
   skip_cleanup: true
