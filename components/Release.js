@@ -1,10 +1,9 @@
 import styled from 'styled-components'
 import Router from 'next/router'
-import config from '../constants/config';
 import Button from '../components/Button'
 
 const Card = styled.div`
-   visibility: true;
+   margin-bottom: 20px;
 `
 
 const Artwork = styled.div`
@@ -15,7 +14,7 @@ const Artwork = styled.div`
    background-color: #090909;
    &:hover {
       img {
-         filter: grayscale(100%);
+         filter: grayscale(100%) brightness(50%);
       }
       div {
          opacity: 1;

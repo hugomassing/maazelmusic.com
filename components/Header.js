@@ -55,7 +55,7 @@ const Img = styled.img`
 
 const Header = () => {
   const { pathname } = useRouter();
-  const navigationList = ['releases', 'contact'];
+  const navigationList = ['releases', 'about', 'contact'];
 
   return (<Container>
       <Link href="/">

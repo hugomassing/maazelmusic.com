@@ -6,7 +6,7 @@ const config = {
     actionButtonLabel: 'Listen Now',
     actionButtonUrl: 'https://soundcloud.com/maazelbeats',
     backgroundUrl: 'static/background.jpg',
-    logoUrl: 'static/logo.svg',
+    logoUrl: 'static/logo.svg'
 }
 
 export default config;
