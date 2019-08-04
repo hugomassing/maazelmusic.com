@@ -2,7 +2,7 @@ const config = {
     headerSize: '70px',
     footerSize: '70px',
     artistName: 'Maazel',
-    tagline: 'Sucking dicks',
+    tagline: 'Crating Music',
     actionButtonLabel: 'Listen Now',
     actionButtonUrl: 'https://soundcloud.com/maazelbeats',
     backgroundUrl: 'static/background.jpg',
