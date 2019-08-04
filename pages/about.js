@@ -5,6 +5,7 @@ import biography from '../constants/biography.md'
 
 const Bio = styled(Markdown)`
     margin-top: 50px;
+    text-align: justify;
 `
 
 const About = () => (

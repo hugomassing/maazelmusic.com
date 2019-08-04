@@ -1,8 +1,17 @@
-import Link from '../components/Link';
 import { useRouter } from 'next/router';
-
 import styled from 'styled-components'
+import Icon from '../components/Icon'
 import config from '../constants/config'
+
+import {
+  faFacebookSquare,
+  faTwitter,
+  faSoundcloud,
+  faInstagram,
+  faSpotify,
+  faApple,
+  faYoutube
+} from '@fortawesome/free-brands-svg-icons'
 
 const Container = styled.div`
   height: ${config.footerSize};
@@ -55,12 +64,17 @@ const Copyright = styled.span`
 
 const Footer = () => {
   const { pathname } = useRouter();
-  const navigationList = ['releases', 'contact'];
-
+  const { links } = config;
   return (<Container>
       <Copyright>© 2019 Maazel / qatataq</Copyright> 
       <Navigation>
-        <span>socials</span>
+        <Icon link={links.facebook} icon={faFacebookSquare}></Icon>
+        <Icon link={links.twitter} icon={faTwitter}></Icon>
+        <Icon link={links.instagram} icon={faInstagram}></Icon>
+        <Icon link={links.soundcloud} icon={faSoundcloud}></Icon>
+        <Icon link={links.spotify} icon={faSpotify}></Icon>
+        <Icon link={links.appleMusic} icon={faApple}></Icon>
+        <Icon link={links.youtube} icon={faYoutube}></Icon>
       </Navigation>
     </Container>)
 };
