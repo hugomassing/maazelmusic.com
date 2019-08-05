@@ -2,7 +2,7 @@ const config = {
     headerSize: '70px',
     footerSize: '70px',
     artistName: 'Maazel',
-    tagline: 'Creating Music',
+    tagline: 'Creating emotional music',
     actionButtonLabel: 'Listen Now',
     actionButtonUrl: 'https://soundcloud.com/maazelbeats',
     backgroundUrl: 'static/background.jpg',
