@@ -15,6 +15,14 @@ const GlobalStyles = createGlobalStyle`
   a {
     text-decoration: none;
   }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 `
 
 const Container = styled.div`
@@ -29,6 +37,7 @@ const Content = styled.div`
   min-height: calc(100vh - ${config.headerSize} - ${config.footerSize});
   width: ${props => props.fullWidth ? '100%' : '1200px'};
   margin: 0 auto;
+  animation: fade-in 0.5s ease-in-out;
 `;
 
 const Layout = props => (
