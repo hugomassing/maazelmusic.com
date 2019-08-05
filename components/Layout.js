@@ -34,8 +34,9 @@ const Content = styled.div`
 const Layout = props => (
   <div>
     <Head>
-      <title>Maazel</title>
+    <title>Maazel</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />.
       <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet" />
     </Head>
     <GlobalStyles />
