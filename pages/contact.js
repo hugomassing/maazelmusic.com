@@ -2,7 +2,7 @@ import Layout from '../components/Layout'
 
 const Contact = () => (
     <Layout>
-        <p>Hello contact</p>
+        <p>For any inquiries, please send contact <b>hugo@qatataq.com</b></p>
     </Layout>
 );
   
