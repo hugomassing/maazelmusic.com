@@ -12,6 +12,9 @@ const GlobalStyles = createGlobalStyle`
     width: 100%;
     font-family: 'Roboto', sans-serif;
   }
+  a {
+    text-decoration: none;
+  }
 `
 
 const Container = styled.div`

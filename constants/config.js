@@ -9,6 +9,7 @@ const config = {
     bioPicture1: 'static/bioPic1.jpg',
     bioPicture2: 'static/bioPic2.jpg',
     logoUrl: 'static/logo.svg',
+    contactMail: 'hugo@qatataq.com',
     links: {
         facebook: 'https://www.facebook.com/maazelbeats',
         twitter: 'https://twitter.com/maazelbeats',
