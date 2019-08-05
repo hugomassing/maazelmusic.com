@@ -1,4 +1,4 @@
-![Bio pic](/static/bio pic.jpg)
+![Bio pic](static/bio pic.jpg)
 
 Behind  **Maazel**  lies  a  Paris-based  **genre-bending/multi-instrumentalist producer**  that  started  the  project  in  2015, mainly  focusing  on  making  **emotional  electronic  music**. His  experience  in  guitar  enabled  him  to  break  the  boundaries  of  genres  and  allowed  him  to  develop  his  **unique**  and  **recognizable  style**.
 
