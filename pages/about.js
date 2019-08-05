@@ -20,7 +20,7 @@ const Pictures = styled.div`
 `
 
 const Img = styled.img`
-    height: 500px;
+    height: 700px;
     width: 49.5%;
     object-fit: cover;
 `
