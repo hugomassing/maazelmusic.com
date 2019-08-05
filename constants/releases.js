@@ -46,6 +46,14 @@ const releases = [
         label: 'Self-Released',
         streamUrl: 'https://soundcloud.com/wearegraves/graves-maazel-lost-boys',
         artworkUrl: 'https://i1.sndcdn.com/artworks-000181113808-55xw7p-t500x500.jpg'
+    },
+    {
+        title: 'Bliss',
+        artist: 'Maazel',
+        year: '2016',
+        label: 'qatataq',
+        streamUrl: 'https://fanlink.to/maazel-bliss',
+        artworkUrl: 'https://i1.sndcdn.com/artworks-000175601015-4yo4ya-t500x500.jpg'
     }
 ]
 
