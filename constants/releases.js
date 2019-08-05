@@ -1,7 +1,7 @@
 const releases = [
     {
         title: 'Transmissions',
-        artist: 'Graves feat. Maazel',
+        artist: 'graves feat. Maazel',
         year: '2019',
         label: 'Welcome Records',
         streamUrl: 'https://graves.fanlink.to/DT',
@@ -36,8 +36,16 @@ const releases = [
         artist: 'Maazel',
         year: '2018',
         label: 'qatataq',
-        streamUrl: 'https://soundcloud.com/maazelbeats/red-moon',
+        streamUrl: 'https://fanlink.to/maazel-red-moon',
         artworkUrl: 'https://i1.sndcdn.com/artworks-000357937740-5vo2s0-t500x500.jpg'
+    },
+    {
+        title: 'Lost Boys',
+        artist: 'graves & Maazel',
+        year: '2016',
+        label: 'Self-Released',
+        streamUrl: 'https://soundcloud.com/wearegraves/graves-maazel-lost-boys',
+        artworkUrl: 'https://i1.sndcdn.com/artworks-000181113808-55xw7p-t500x500.jpg'
     }
 ]
 
