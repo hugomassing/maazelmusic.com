@@ -6,6 +6,8 @@ const config = {
     actionButtonLabel: 'Listen Now',
     actionButtonUrl: 'https://soundcloud.com/maazelbeats',
     backgroundUrl: 'static/background.jpg',
+    bioPicture1: 'static/bioPic1.jpg',
+    bioPicture2: 'static/bioPic2.jpg',
     logoUrl: 'static/logo.svg',
     links: {
         facebook: 'https://www.facebook.com/maazelbeats',

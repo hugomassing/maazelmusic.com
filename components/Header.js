@@ -55,14 +55,16 @@ const Img = styled.img`
 
 const Header = () => {
   const { pathname } = useRouter();
-  const navigationList = ['releases', 'about', 'contact'];
+  const navigationList = ['releases', 'about'];
 
   return (<Container>
-      <Link href="/">
-        <Logo>
-          <Img src="static/Logo.svg" alt="logo"/>
-        </Logo>
-      </Link>
+      <Logo>
+        <Link href="/">
+          <a>
+            <Img src="static/Logo.svg" alt="logo"/>
+          </a>
+        </Link>
+      </Logo>
       <Navigation>
         <Link href="/">
           <A selected={pathname === '/'}>Home</A>

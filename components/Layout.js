@@ -22,6 +22,7 @@ const Container = styled.div`
 
 const Content = styled.div`
   display: flex;
+  flex-direction: ${props => props.fullWidth ? 'row' : 'column'};;
   min-height: calc(100vh - ${config.headerSize} - ${config.footerSize});
   width: ${props => props.fullWidth ? '100%' : '1200px'};
   margin: 0 auto;

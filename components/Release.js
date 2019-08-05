@@ -63,10 +63,9 @@ const ReleaseInfos = styled.span`
 `  
 
 const ReleaseCard = (props) => {
-    const { release } = props; 
-
-    console.log(release);
-    if (!release) return (<></>);
+   const { release } = props; 
+   
+   if (!release) return (<></>);
 
    return (<Card >
       <Artwork>
