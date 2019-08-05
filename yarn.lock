@@ -4111,6 +4111,11 @@ next-optimized-images@^2.5.3:
     raw-loader "^2.0.0"
     url-loader "^1.1.2"
 
+next-seo@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-2.0.0.tgz#478ea9ac5a6f7b331b58f9604a577bcccbd4ba43"
+  integrity sha512-VUkgKtnBEugWIjZTHLBRO/EI9LCqPM55qCuYgP1OBvSPwXKReG27g9k5iEHaFymoTjdyhQFMUE8GVHdbAfd2eA==
+
 next-server@9.0.2:
   version "9.0.2"
   resolved "https://registry.yarnpkg.com/next-server/-/next-server-9.0.2.tgz#8e119734c2492fd20faa7e487989b7d376d67d70"

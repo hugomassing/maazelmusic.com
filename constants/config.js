@@ -1,3 +1,27 @@
+const SEO = {
+    description: 'Behind Maazel lies a Paris-based genre-bending/multi-instrumentalist producer that started the project in 2015, mainly focusing on making emotional electronic music. His experience in guitar enabled him to break the boundaries of genres and allowed him to develop his unique and recognizable style.',
+    titleTemplate: 'Maazel | %s',
+    additionalMetaTags: '',
+    openGraph : { // what's displayed on social networks when sharing the website
+        title : 'Maazel - Creating Emotional Music',
+        type: 'website',
+        url: 'https://www.maazelmusic.com/',
+        site_name: 'Maazel Music',
+        locale: 'en_US',
+        images : [{
+            url: '/static/og-image.jpg',
+            width: 800,
+            height: 600,
+            alt: 'Og Image Alt',
+        }]
+    },
+    twitter: {
+        handle: '@maazelmusic',
+        site: '@maazelmusic',
+        cardType: 'summary_large_image',
+    }
+}
+
 const config = {
     headerSize: '70px',
     footerSize: '70px',
@@ -10,6 +34,9 @@ const config = {
     bioPicture2: 'static/bioPic2.jpg',
     logoUrl: 'static/logo.svg',
     contactMail: 'hugo@qatataq.com',
+    htmlTitle: 'Maazel',
+    websiteUrl: 'https://www.maazelmusic.com/',
+    SEO: SEO,
     links: {
         facebook: 'https://www.facebook.com/maazelbeats',
         twitter: 'https://twitter.com/maazelbeats',

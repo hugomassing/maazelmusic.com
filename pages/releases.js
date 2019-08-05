@@ -12,7 +12,7 @@ const ReleasesContainer = styled.div`
 `
 
 const ReleasesList = () => (
-    <Layout>
+    <Layout title="Releases">
         <ReleasesContainer>
             {releases && releases.map((release, index) => <ReleaseCard
                 key={`${index}_${release.name}`} 

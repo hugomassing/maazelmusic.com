@@ -40,7 +40,7 @@ const Tagline = styled.span`
 `
 
 const Home = () => (
-    <Layout fullWidth>
+    <Layout fullWidth title="Home">
       <Container>
         <Overlay>
           <Infos>

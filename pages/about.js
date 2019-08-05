@@ -32,7 +32,7 @@ const ContactMe = styled.a`
 `
 
 const About = () => (
-    <Layout>
+    <Layout title="Biography">
         <h1>Biography</h1>
         <Bio>
             {biography}

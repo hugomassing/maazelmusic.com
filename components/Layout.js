@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styled, { createGlobalStyle } from 'styled-components'
+import { NextSeo } from 'next-seo';
 import config from '../constants/config'
 
 import Header from './Header';
@@ -43,7 +44,7 @@ const Content = styled.div`
 const Layout = props => (
   <div>
     <Head>
-    <title>Maazel</title>
+    <title>{config.htmlTitle} | {props.title}</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
       <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png" />
@@ -52,6 +53,11 @@ const Layout = props => (
     </Head>
     <GlobalStyles />
     <Container>
+      <NextSeo
+        title={props.title}
+        description={`${config.artistName} ${props.title}`}
+        canonical={`${config.websiteUrl}${props.title.toLowerCase()}`}
+      />
       <Header />
       <Content {...props}>
         {props.children}
