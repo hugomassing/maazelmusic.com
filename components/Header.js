@@ -21,6 +21,7 @@ const Navigation = styled.div`
 `
 const Logo = styled.a`
   margin-left: 30px;
+  cursor: pointer;
 `
 
 const A = styled.a`
@@ -58,13 +59,11 @@ const Header = () => {
   const navigationList = ['releases', 'about'];
 
   return (<Container>
-      <Logo>
-        <Link href="/">
-          <a>
-            <Img src="static/Logo.svg" alt="logo"/>
-          </a>
-        </Link>
-      </Logo>
+      <Link href="/">
+        <Logo>
+          <Img src="static/Logo.svg" alt="logo"/>
+        </Logo>
+      </Link>
       <Navigation>
         <Link href="/">
           <A selected={pathname === '/'}>Home</A>
