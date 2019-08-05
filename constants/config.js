@@ -9,7 +9,7 @@ const SEO = {
         site_name: 'Maazel Music',
         locale: 'en_US',
         images : [{
-            url: '/static/og-image.jpg',
+            url: 'https://hugomassing.github.io/maazelmusic.com/static/og-image.jpg',
             width: 800,
             height: 600,
             alt: 'Og Image Alt',
