@@ -2,3 +2,13 @@
 
 # maazelmusic.com
 Source for maazelmusic.com
+
+## Instructions
+```yarn```
+
+```yarn dev```
+
+
+To generate the static site
+
+```yarn export```
