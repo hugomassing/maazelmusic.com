@@ -28,7 +28,7 @@ const config = {
     artistName: 'Maazel',
     tagline: 'Creating emotional music',
     actionButtonLabel: 'Listen Now',
-    actionButtonUrl: 'https://soundcloud.com/maazelbeats',
+    actionButtonUrl: 'https://fanlink.to/l2ma',
     backgroundUrl: 'static/background.jpg',
     bioPicture1: 'static/bioPic1.jpg',
     bioPicture2: 'static/bioPic2.jpg',
