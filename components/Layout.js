@@ -14,7 +14,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Roboto', sans-serif;
   }
   a {
-    text-decoration: none;
+    color: #020202;
   }
   @keyframes fade-in {
     0% {
@@ -36,9 +36,13 @@ const Content = styled.div`
   display: flex;
   flex-direction: ${props => props.fullWidth ? 'row' : 'column'};;
   min-height: calc(100vh - ${config.headerSize} - ${config.footerSize});
-  width: ${props => props.fullWidth ? '100%' : '1200px'};
+  width: ${props => props.fullWidth ? '100%' : '80%'};
   margin: 0 auto;
   animation: fade-in 0.5s ease-in-out;
+
+  @media only screen and (max-width: 600px) {
+    width: ${props => props.fullWidth ? '100%' : '90%'};
+  } 
 `;
 
 const Layout = props => (

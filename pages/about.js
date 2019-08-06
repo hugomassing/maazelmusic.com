@@ -7,6 +7,12 @@ import config from '../constants/config'
 
 const Bio = styled(Markdown)`
     text-align: justify;
+    align-self: center;
+    width: 60%;
+    margin: 20px 0;
+    @media only screen and (max-width: 600px) {
+        width: 100%;
+    } 
 `
 
 const Pictures = styled.div`
@@ -24,16 +30,17 @@ const Img = styled.img`
     height: 700px;
     width: 49.5%;
     object-fit: cover;
+    @media only screen and (max-width: 600px) {
+        height: 250px;
+    } 
 `
 
 const ContactMe = styled.a`
-    width: 200px;
     align-self: center;
 `
 
 const About = () => (
     <Layout title="Biography">
-        <h1>Biography</h1>
         <Bio>
             {biography}
         </Bio>

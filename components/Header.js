@@ -1,5 +1,8 @@
 import Link from '../components/Link';
+import React, { useState } from 'react';
 import { useRouter } from 'next/router';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 import styled from 'styled-components'
 import config from '../constants/config'
@@ -18,6 +21,16 @@ const Navigation = styled.div`
   align-items: center;
   justify-content: flex-end;
   margin-right: 30px;
+  z-index: 20;
+  @media only screen and (max-width: 600px) {
+    display: ${props => props.hidden ? 'none' : 'flex'};
+    position: absolute;
+    flex-direction: column;
+    background-color: #090909;
+    right: -20px;
+    top: ${config.headerSize};
+    transition: opacity 0.5s ease-in-out;
+  }
 `
 const Logo = styled.a`
   margin-left: 30px;
@@ -31,6 +44,7 @@ const A = styled.a`
   font-size: 14px;
   cursor: pointer;
   position: relative;
+  color: white;
   &:after {
     content: '';
     position: absolute;
@@ -54,9 +68,19 @@ const Img = styled.img`
   height: 25px;
 `
 
+const BarsMenu = styled.div`
+  display: none;
+  @media only screen and (max-width: 600px) {
+    display: block;
+    font-size: 30px;
+    margin-right: 50px; 
+  }
+`
+
 const Header = () => {
   const { pathname } = useRouter();
   const navigationList = ['releases', 'about'];
+  const [hidden, setHidden] = useState(true);
 
   return (<Container>
       <Link href="/">
@@ -64,12 +88,15 @@ const Header = () => {
           <Img src="static/Logo.svg" alt="logo"/>
         </Logo>
       </Link>
-      <Navigation>
+      <BarsMenu onClick={() => setHidden(hidden ? false : true)}>
+        <FontAwesomeIcon icon={faBars}/>
+      </BarsMenu>
+      <Navigation hidden={hidden}>
         <Link href="/">
           <A selected={pathname === '/'}>Home</A>
         </Link>
-        {navigationList.map(navigationItem => (<Link key={navigationItem} href={'/' + navigationItem}>
-          <A selected={pathname === '/' + navigationItem}>{navigationItem}</A>
+        {navigationList.map(navigationItem => (<Link key={navigationItem} href={'/' + navigationItem}  onClick={() => setHidden(hidden ? false : true)}>
+          <A selected={pathname === '/' + navigationItem}  >{navigationItem}</A>
         </Link>))}
       </Navigation>
     </Container>)
