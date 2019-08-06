@@ -1751,6 +1751,11 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
+classnames@^2.2.5:
+  version "2.2.6"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
+  integrity sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==
+
 clone-response@1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/clone-response/-/clone-response-1.0.2.tgz#d1dc973920314df67fbeb94223b4ee350239e96b"
@@ -3116,6 +3121,11 @@ hmac-drbg@^1.0.0:
     hash.js "^1.0.3"
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
+
+hoist-non-react-statics@^2.3.1:
+  version "2.5.5"
+  resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.5.5.tgz#c5903cf409c0dfd908f388e619d86b9c1174cb47"
+  integrity sha512-rqcy4pJo55FTTLWt+bU8ukscqHeE/e9KWvsOW2b/a3afxQZhwkQdT1rPPCJ0rYXdj4vNcasY8zHTH+jF/qStxw==
 
 hosted-git-info@^2.1.4:
   version "2.7.1"
@@ -4805,7 +4815,7 @@ prop-types-exact@1.2.0:
     object.assign "^4.1.0"
     reflect.ownkeys "^0.2.0"
 
-prop-types@15.7.2, prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.6.2:
+prop-types@15.7.2, prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.6.0, prop-types@^15.6.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -4980,6 +4990,17 @@ react-is@16.8.6, react-is@^16.6.0, react-is@^16.8.1:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
   integrity sha512-aUk3bHfZ2bRSVFFbbeVS4i+lNPZr3/WM5jT2J5omUVV1zzcs1nAaf3l51ctA5FFvCRbhrH0bdAsRRQddFJZPtA==
+
+react-soundplayer@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/react-soundplayer/-/react-soundplayer-1.0.4.tgz#333b0edc41694a3f883117898d962af061bb8d3f"
+  integrity sha512-Rnp3qdG3ztG2eEHBQ4Muqhh7EpilyUi/+CiVPsp6kl0ErS0RnnYaB70JFk240BOdnwDWrAel6sABPq4ehYb0NQ==
+  dependencies:
+    classnames "^2.2.5"
+    hoist-non-react-statics "^2.3.1"
+    object-assign "^4.1.1"
+    prop-types "^15.6.0"
+    soundcloud-audio "^1.2.2"
 
 react@^16.8.6:
   version "16.8.6"
@@ -5416,6 +5437,11 @@ sort-keys@^2.0.0:
   integrity sha1-ZYU1WEhh7JfXMNbPQYIuH1ZoQSg=
   dependencies:
     is-plain-obj "^1.0.0"
+
+soundcloud-audio@^1.2.2:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/soundcloud-audio/-/soundcloud-audio-1.4.0.tgz#2d9ceeaa8a3c63d814e18c4c2602fe3be9a99655"
+  integrity sha512-2kHyTfu+KNOLZuRKynaeTmj846deC1WbiDTu7rkd1/93lk9FxtgbGkNQSIy5H4gxZD9EEeTdXhkE7uiMwEXuEQ==
 
 source-list-map@^2.0.0:
   version "2.0.1"

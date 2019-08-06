@@ -1,3 +1,5 @@
+import React, { Component } from 'react'
+import { withSoundCloudAudio } from 'react-soundplayer/addons'
 import styled from 'styled-components'
 import Router from 'next/router'
 import Button from '../components/Button'
@@ -30,6 +32,7 @@ const Img = styled.img`
 
 const Overlay = styled.div`
    display: flex;
+   flex-direction: column;
    align-items: center;
    justify-content: center;
    height: 100%;
@@ -60,7 +63,33 @@ const ReleaseInfos = styled.span`
    margin: 5px;
    font-size: 70%;
    margin-bottom: 10px;
-`  
+`
+
+const ActionButton = styled(Button)`
+   margin: 10px 20px;
+`
+
+const CustomPlayer = withSoundCloudAudio(props => {
+  const { soundCloudAudio, playing, track } = props;
+  const play = () => {
+    if (playing) {
+      soundCloudAudio.pause();
+    } else {
+      soundCloudAudio.play();
+    }
+  };
+
+  if (!track) {
+    return <></>;
+  }
+
+  return (
+   <ActionButton onClick={() => play()}>
+      {playing ? 'Pause' : 'Play'}
+   </ActionButton>
+  );
+});
+
 
 const ReleaseCard = (props) => {
    const { release } = props; 
@@ -71,17 +100,23 @@ const ReleaseCard = (props) => {
       <Artwork>
          <Img src={release.artworkUrl} />
          <Overlay>
-            <Button onClick={() => Router.push(release.streamUrl)}>
-               Stream
-            </Button>
+            <a href={release.streamUrl} target="_blank" rel="noopener noreferrer">
+               <ActionButton>
+                  Link
+               </ActionButton>
+            </a>
+            <CustomPlayer
+               resolveUrl={release.audio}
+               clientId={'25a6312cd0379dbf2b4d8fce66d4f112'}
+            />
          </Overlay>
       </Artwork>
       <Infos>
          <ReleaseTitle>{release.title}</ReleaseTitle>
             <span>{release.artist}</span>
-         <ReleaseInfos>{release.label} - {release.year}</ReleaseInfos>
+         <ReleaseInfos>{release.label} - {release.year}</ReleaseInfos>  
       </Infos>
-    </Card>)
+   </Card>)
 };
 
 export default ReleaseCard;

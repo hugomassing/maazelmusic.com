@@ -50,9 +50,11 @@ const Home = () => (
             <Tagline>
               {config.tagline}
             </Tagline>
-            <Button onClick={() => Router.push(config.actionButtonUrl)}>
-              {config.actionButtonLabel}
-            </Button> 
+            <a href={config.actionButtonUrl} target="_blank" rel="noopener noreferrer">
+               <Button>
+                  {config.actionButtonLabel}
+               </Button>
+            </a>
           </Infos>
         </Overlay>
       </Container>
