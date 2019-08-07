@@ -12,7 +12,10 @@ const Bio = styled(Markdown)`
     margin: 20px 0;
     @media only screen and (max-width: 600px) {
         width: 100%;
-    } 
+    }
+    a {
+        text-decoration: underline;
+    }
 `
 
 const Pictures = styled.div`

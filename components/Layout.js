@@ -15,6 +15,7 @@ const GlobalStyles = createGlobalStyle`
   }
   a {
     color: #020202;
+    text-decoration: none;
   }
   @keyframes fade-in {
     0% {

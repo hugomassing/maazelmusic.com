@@ -11,6 +11,7 @@ const ButtonContainer = styled.button`
     border: none;
     background-color: ${props => props.primary ? '#090909' : 'white'};
     color: ${props => props.primary ? 'white' : '#090909'};
+    text-decoration: none;
 `
 
 const Button = (props) => {

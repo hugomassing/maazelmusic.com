@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { withSoundCloudAudio } from 'react-soundplayer/addons'
 import styled from 'styled-components'
-import Router from 'next/router'
-import Button from '../components/Button'
+import { faPause, faPlay } from '@fortawesome/free-solid-svg-icons'
+import Button from './Button'
+import Icon from './Icon'
 
 const Card = styled.div`
    margin-bottom: 20px;
@@ -69,6 +70,11 @@ const ActionButton = styled(Button)`
    margin: 10px 20px;
 `
 
+const PlayerControls = styled.div`
+   position:absolute;
+   bottom: 50px;
+`
+
 const CustomPlayer = withSoundCloudAudio(props => {
   const { soundCloudAudio, playing, track } = props;
   const play = () => {
@@ -84,9 +90,9 @@ const CustomPlayer = withSoundCloudAudio(props => {
   }
 
   return (
-   <ActionButton onClick={() => play()}>
-      {playing ? 'Pause' : 'Play'}
-   </ActionButton>
+   <PlayerControls onClick={() => play()} >
+      <Icon icon={playing ? faPause : faPlay} />
+   </PlayerControls>
   );
 });
 
@@ -102,7 +108,7 @@ const ReleaseCard = (props) => {
          <Overlay>
             <a href={release.streamUrl} target="_blank" rel="noopener noreferrer">
                <ActionButton>
-                  Link
+                  Stream
                </ActionButton>
             </a>
             <CustomPlayer
