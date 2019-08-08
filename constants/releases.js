@@ -1,5 +1,14 @@
 const releases = [
     {
+        title: 'Hold On',
+        artist: 'Gill Chang, Maazel & Danni Carra',
+        year: '2019',
+        label: 'found/red',
+        streamUrl: 'https://foundred.ffm.to/gillchang',
+        artworkUrl: 'https://i1.sndcdn.com/artworks-000578546750-i50hoi-t500x500.jpg',
+        audio: 'https://soundcloud.com/gillchang/gill-chang-maazel-danni-carra-hold-on'
+    },
+    {
         title: 'Transmissions',
         artist: 'graves feat. Maazel',
         year: '2019',
