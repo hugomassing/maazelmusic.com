@@ -13,8 +13,8 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #F2F2F2;
-  background-color: #090909;
+  color: ${props => props.theme.secondaryColor};
+  background-color: ${props => props.theme.headerColor};
 `
 const Navigation = styled.div`
   display: flex;
@@ -26,7 +26,7 @@ const Navigation = styled.div`
     display: ${props => props.hidden ? 'none' : 'flex'};
     position: absolute;
     flex-direction: column;
-    background-color: #090909;
+    background-color: ${props => props.theme.headerColor};
     right: -20px;
     top: ${config.headerSize};
     transition: opacity 0.5s ease-in-out;
@@ -44,7 +44,7 @@ const A = styled.a`
   font-size: 14px;
   cursor: pointer;
   position: relative;
-  color: white;
+  color: ${props => props.theme.secondaryColor};
   &:after {
     content: '';
     position: absolute;

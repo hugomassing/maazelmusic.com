@@ -19,8 +19,8 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #F2F2F2;
-  background-color: #090909;
+  color: ${props => props.theme.secondaryColor};
+  background-color: ${props => props.theme.footerColor};
 `
 const Navigation = styled.div`
   display: flex;

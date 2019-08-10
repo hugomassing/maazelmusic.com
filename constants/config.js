@@ -22,6 +22,15 @@ const SEO = {
     }
 }
 
+const theme = {
+    fontFamily: 'Roboto',
+    linkColor: '#000000',
+    primaryColor: '#090909',
+    secondaryColor: '#F2F2F2',
+    headerColor: '#090909',
+    footerColor: '#090909'
+}
+
 const config = {
     headerSize: '70px',
     footerSize: '70px',
@@ -37,6 +46,7 @@ const config = {
     htmlTitle: 'Maazel',
     websiteUrl: 'https://www.maazelmusic.com/',
     SEO: SEO,
+    theme: theme,
     links: {
         facebook: 'https://www.facebook.com/maazelbeats',
         twitter: 'https://twitter.com/maazelbeats',

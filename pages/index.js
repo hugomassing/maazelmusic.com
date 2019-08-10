@@ -1,12 +1,13 @@
 import styled from 'styled-components'
-import Router from 'next/router'
 import Layout from '../components/Layout'
 import Button from '../components/Button'
 import config from '../constants/config'
 
+import { hex2rgba } from '../utils/utils'
+
 const Container = styled.div`
   width: 100%;
-  background-color: black;
+  background-color: ${props => props.theme.primaryColor};
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -19,12 +20,12 @@ const Overlay = styled.div`
   align-items: center;
   background: linear-gradient(
     to bottom,
-    #090909,
-    rgba(9, 9, 9, 0)
+    ${props => props.theme.primaryColor},
+    ${props => hex2rgba(props.theme.primaryColor, 0.5)}
   );
 `
 const Infos = styled.div`
-  color: white;
+  color: ${props => props.theme.secondaryColor};
   margin: 0 10%;;
   width: 60%;
 `

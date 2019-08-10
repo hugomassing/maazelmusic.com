@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const SocialIcon = styled.a`
     cursor: pointer;
-    color: white;
     margin: 0 5px;
+    color: ${props => props.theme.secondaryColor};
 `
 
 const Icon = (props) => {

@@ -9,8 +9,8 @@ const ButtonContainer = styled.button`
     text-transform: uppercase;
     font-weight: bold;
     border: none;
-    background-color: ${props => props.primary ? '#090909' : 'white'};
-    color: ${props => props.primary ? 'white' : '#090909'};
+    background-color: ${props => props.primary ? props.theme.primaryColor : props.theme.secondaryColor };
+    color: ${props => props.primary ? props.theme.secondaryColor : props.theme.primaryColor };
     text-decoration: none;
 `
 

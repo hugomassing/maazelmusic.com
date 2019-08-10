@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import styled, { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { NextSeo } from 'next-seo';
 import config from '../constants/config'
 
@@ -11,11 +11,11 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     min-height: 100vh;
     width: 100%;
-    font-family: 'Roboto', sans-serif;
+    font-family: ${props => props.theme.fontFamily}, Arial, Helvetica, sans-serif;
   }
   a {
-    color: #020202;
     text-decoration: none;
+    color: ${props => props.theme.linkColor};
   }
   @keyframes fade-in {
     0% {
@@ -49,7 +49,7 @@ const Content = styled.div`
 const Layout = props => (
   <div>
     <Head>
-    <title>{config.htmlTitle} | {props.title}</title>
+      <title>{config.htmlTitle} | {props.title}</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
       <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png" />
@@ -57,19 +57,21 @@ const Layout = props => (
       <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet" />
       <link rel="canonical" href="https://maazelmusic.com/" />
     </Head>
-    <GlobalStyles />
-    <Container>
-      <NextSeo
-        title={props.title}
-        description={`${config.artistName} ${props.title}`}
-        canonical={`${config.websiteUrl}${props.title.toLowerCase()}`}
-      />
-      <Header />
-      <Content {...props}>
-        {props.children}
-      </Content>
-      <Footer />
-    </Container>
+    <ThemeProvider theme={config.theme}>
+      <Container>
+        <GlobalStyles />
+        <NextSeo
+          title={props.title}
+          description={`${config.artistName} ${props.title}`}
+          canonical={`${config.websiteUrl}${props.title.toLowerCase()}`}
+        />
+        <Header />
+        <Content {...props}>
+          {props.children}
+        </Content>
+        <Footer />
+      </Container>
+    </ThemeProvider>
   </div>
 );
 

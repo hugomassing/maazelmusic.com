@@ -14,7 +14,7 @@ const Artwork = styled.div`
    width: 250px;
    height: 250px;
    position: relative;
-   background-color: #090909;
+   background-color: ${props => props.theme.primaryColor};
    &:hover {
       img {
          filter: grayscale(100%) brightness(50%);
