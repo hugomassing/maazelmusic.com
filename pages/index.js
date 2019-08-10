@@ -21,7 +21,7 @@ const Overlay = styled.div`
   background: linear-gradient(
     to bottom,
     ${props => props.theme.primaryColor},
-    ${props => hex2rgba(props.theme.primaryColor, 0.5)}
+    ${props => hex2rgba(props.theme.primaryColor, 0.1)}
   );
 `
 const Infos = styled.div`

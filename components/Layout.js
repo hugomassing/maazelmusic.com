@@ -12,6 +12,8 @@ const GlobalStyles = createGlobalStyle`
     min-height: 100vh;
     width: 100%;
     font-family: ${props => props.theme.fontFamily}, Arial, Helvetica, sans-serif;
+    color: ${props => props.theme.primaryColor};
+    background-color: ${props => props.theme.secondaryColor};
   }
   a {
     text-decoration: none;
