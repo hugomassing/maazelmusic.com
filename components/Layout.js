@@ -55,7 +55,6 @@ const Layout = props => (
       <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png" />
       <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet" />
-      <meta http-equiv="refresh" content="0; URL=https://maazelmusic.com/" />
       <link rel="canonical" href="https://maazelmusic.com/" />
     </Head>
     <GlobalStyles />
