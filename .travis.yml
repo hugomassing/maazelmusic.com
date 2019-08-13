@@ -5,7 +5,7 @@ cache:
   directories:
     - "node_modules"
 script: yarn export
-before_deploy : touch out/.nojekyll && touch out/CNAME && echo \"maazelmusic.com\" >> out/CNAME
+before_deploy : touch out/.nojekyll && touch out/CNAME && echo maazelmusic.com >> out/CNAME
 deploy:
   provider: pages
   skip_cleanup: true
