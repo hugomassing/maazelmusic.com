@@ -85,7 +85,7 @@ const Layout = props => (
         <NextSeo
           title={props.title}
           description={`${config.artistName} ${props.title}`}
-          canonical={`${config.websiteUrl}${props.title.toLowerCase()}`}
+          canonical={`${config.websiteUrl}${props.title.toLowerCase() === 'home' ? '': props.title.toLowerCase()}`}
         />
         <Header />
         <Content {...props}>{props.children}</Content>
