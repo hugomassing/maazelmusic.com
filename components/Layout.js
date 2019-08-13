@@ -77,7 +77,6 @@ const Layout = props => (
         href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap"
         rel="stylesheet"
       />
-      <link rel="canonical" href="https://maazelmusic.com/" />
     </Head>
     <ThemeProvider theme={config.theme}>
       <Container>

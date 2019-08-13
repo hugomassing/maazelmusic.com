@@ -13,7 +13,7 @@ const SEO = {
     images: [
       {
         url:
-          "https://hugomassing.github.io/maazelmusic.com/static/og-image.jpg",
+          "https://www.maazelmusic.com/static/og-image.jpg",
         width: 800,
         height: 600,
         alt: "Og Image Alt"
