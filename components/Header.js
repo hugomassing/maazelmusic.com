@@ -102,7 +102,7 @@ const Header = () => {
             href={"/" + navigationItem}
             onClick={() => setHidden(hidden ? false : true)}
           >
-            <A selected={pathname === "/" + navigationItem}>{navigationItem}</A>
+            <A href={"/" + navigationItem} selected={pathname === "/" + navigationItem}>{navigationItem}</A>
           </Link>
         ))}
       </Navigation>
