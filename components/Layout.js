@@ -83,7 +83,6 @@ const Layout = props => (
         <GlobalStyles />
         <NextSeo
           title={props.title}
-          description={`${config.artistName} ${props.title}`}
           canonical={`${config.websiteUrl}${props.title.toLowerCase() === 'home' ? '': props.title.toLowerCase()}`}
         />
         <Header />
