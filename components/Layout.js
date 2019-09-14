@@ -56,6 +56,7 @@ const Layout = props => (
         {config.htmlTitle} | {props.title}
       </title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <meta name="google-site-verification" content="Gn_ZwQWQS4QEL1lC4J32wR5VnEbDeCPNwe_nOssPUOM" />
       <link
         rel="shortcut icon"
         type="image/x-icon"
