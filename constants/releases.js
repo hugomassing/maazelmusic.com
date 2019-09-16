@@ -1,5 +1,16 @@
 const releases = [
   {
+    title: "1NIGHT",
+    artist: "yetep & Maazel feat. GLNNA",
+    year: "2019",
+    label: "Enhanced Music",
+    streamUrl: "https://enhanced.lnk.to/Enhanced426",
+    artworkUrl:
+      "https://i1.sndcdn.com/artworks-000585169310-dat7re-t500x500.jpg",
+    audio:
+      "https://soundcloud.com/enhanced/yetep-maazel-feat-glnna-1night-available-060919"
+  },
+  {
     title: "Hold On",
     artist: "Gill Chang, Maazel & Danni Carra",
     year: "2019",
