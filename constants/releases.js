@@ -1,5 +1,16 @@
 const releases = [
   {
+    title: "Kids (Maazel Remix)",
+    artist: "LIONE ft. Miranda Glory",
+    year: "2019",
+    label: "Musical Freedom",
+    streamUrl: "https://fanlink.to/kids-maazel-remix",
+    artworkUrl:
+      "https://i1.sndcdn.com/artworks-000616705774-wuz0pr-t500x500.jpg",
+    audio:
+      "https://soundcloud.com/maazelbeats/lione-ft-miranda-glory-kids-maazel-remix"
+  },
+  {
     title: "1NIGHT",
     artist: "yetep & Maazel feat. GLNNA",
     year: "2019",
