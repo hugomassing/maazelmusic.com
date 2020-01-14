@@ -55,6 +55,7 @@ const Infos = styled.div`
   font-size: 16px;
   display: flex;
   flex-direction: column;
+  width: 340px;
 `;
 
 const ReleaseTitle = styled.span`
@@ -67,7 +68,6 @@ const ReleaseInfos = styled.span`
   margin: 5px;
   font-size: 70%;
   margin-bottom: 10px;
-  width: 340px;
 `;
 
 const ActionButton = styled(Button)`
