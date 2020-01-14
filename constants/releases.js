@@ -1,5 +1,16 @@
 const releases = [
   {
+    title: "1NIGHT (Maazel & Jupom Remix)",
+    artist: "Yetep & Maazel With GLNNA",
+    year: "2019",
+    label: "Enhanced Music",
+    streamUrl: "http://enhanced.lnk.to/Enhanced426R",
+    artworkUrl:
+      "https://i1.sndcdn.com/artworks-000642731236-99tp67-t500x500.jpg",
+    audio:
+      "https://soundcloud.com/enhanced/yetep-maazel-with-glnna-1night-maazel-jupom-remix-1"
+  },
+  {
     title: "Kids (Maazel Remix)",
     artist: "LIONE ft. Miranda Glory",
     year: "2019",
