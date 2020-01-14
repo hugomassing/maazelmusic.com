@@ -7,6 +7,9 @@ import Icon from "./Icon";
 
 const Card = styled.div`
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Artwork = styled.div`
@@ -64,6 +67,7 @@ const ReleaseInfos = styled.span`
   margin: 5px;
   font-size: 70%;
   margin-bottom: 10px;
+  width: 340px;
 `;
 
 const ActionButton = styled(Button)`
