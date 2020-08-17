@@ -1,5 +1,27 @@
 const releases = [
   {
+    title: "Hurt Again",
+    artist: "Squired & Maazel & Danni Carra",
+    year: "2020",
+    label: "Proximity",
+    streamUrl: "https://proximity.ffm.to/hurtagain",
+    artworkUrl:
+      "https://i1.sndcdn.com/artworks-ZhnkJOg1yLgBcGMS-RpMRLQ-t500x500.jpg",
+    audio:
+      "https://soundcloud.com/proximity/squired-maazel-danni-carra-hurt-again"
+  },
+  {
+    title: "I'm Fine (Maazel Remix)",
+    artist: "William Black Feat. Nevve",
+    year: "2020",
+    label: "Lowly",
+    streamUrl: "https://lowly.ffm.to/imfine_maazelremix",
+    artworkUrl:
+      "https://i1.sndcdn.com/artworks-UnQhlh2ffT2GqpDt-A9FHPg-t500x500.jpg",
+    audio:
+      "https://soundcloud.com/maazelbeats/william-black-feat-nevve-im-fine-maazel-remix"
+  },
+  {
     title: "1NIGHT (Maazel & Jupom Remix)",
     artist: "Yetep & Maazel With GLNNA",
     year: "2019",
