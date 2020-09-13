@@ -10,10 +10,22 @@ import ReleaseCard from "../components/Release";
 import releases from "../constants/releases";
 import biography from "../constants/biography.md";
 
+const Section = styled.div`
+  margin-bottom: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: ${(props) => props.theme.primaryColor};
+  :first-child {
+    margin-top: 60px;
+  }
+`;
+
 const Bio = styled(Markdown)`
   text-align: justify;
   align-self: center;
-  margin: 20px 0;
+  margin: 20px 60px;
   @media only screen and (max-width: 600px) {
     width: 100%;
   }
@@ -23,7 +35,7 @@ const Bio = styled(Markdown)`
 `;
 
 const Pictures = styled.div`
-  margin: 50px 0;
+  margin: 50px 60px;
   width: 80%;
   display: flex;
   align-self: center;
@@ -46,23 +58,10 @@ const ContactMe = styled.a`
   align-self: center;
 `;
 
-const Section = styled.div`
-  margin-bottom: 60px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: ${(props) => props.theme.primaryColor};
-  :first-child {
-    margin-top: 60px;
-  }
-`;
-
 const ReleasesContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 50px 0;
 `;
 
 const ListenNowButton = styled(Button)`
@@ -90,7 +89,7 @@ const Home = () => (
       <ReleasesContainer>
         {releases &&
           releases
-            .splice(0, 3)
+            .filter((item, i) => i < 3)
             .map((release, index) => (
               <ReleaseCard key={`${index}_${release.name}`} release={release} />
             ))}
@@ -107,15 +106,16 @@ const Home = () => (
             ))}
       </ReleasesContainer>
     </Section>
+    <Title>About Maazel</Title>
     <Section>
       <Bio>{biography}</Bio>
-      <ContactMe href={`mailto:${config.contactMail}`}>
-        <Button primary>Contact me</Button>
-      </ContactMe>
       <Pictures>
         <BioImg src={config.bioPicture1} />
         <BioImg src={config.bioPicture2} />
       </Pictures>
+      <ContactMe href={`mailto:${config.contactMail}`}>
+        <Button primary>Send a email</Button>
+      </ContactMe>
     </Section>
   </Layout>
 );

@@ -10,7 +10,7 @@ import {
   faInstagram,
   faSpotify,
   faApple,
-  faYoutube
+  faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 
 const Container = styled.div`
@@ -19,8 +19,8 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: ${props => props.theme.secondaryColor};
-  background-color: ${props => props.theme.footerColor};
+  flex-direction: column;
+  color: ${(props) => props.theme.primaryColor};
 `;
 const Navigation = styled.div`
   display: flex;
@@ -48,7 +48,7 @@ const A = styled.a`
     border-bottom: 2px solid;
     margin-top: 3px;
     transition: width 0.25s;
-    width: ${props => (props.selected ? "60%" : "0")};
+    width: ${(props) => (props.selected ? "60%" : "0")};
   }
   &:hover,
   &:focus,
@@ -67,7 +67,7 @@ const Footer = () => {
   const { links } = config;
   return (
     <Container>
-      <Copyright>© 2019 Maazel / qatataq</Copyright>
+      <Copyright>© 2020 Maazel / qatataq</Copyright>
       <Navigation>
         <Icon link={links.facebook} icon={faFacebookSquare}></Icon>
         <Icon link={links.twitter} icon={faTwitter}></Icon>

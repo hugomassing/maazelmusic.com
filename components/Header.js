@@ -76,7 +76,7 @@ const BarsMenu = styled.div`
 `;
 
 const Header = () => {
-  const { pathname } = useRouter();
+  const { pathname, query } = useRouter();
   const navigationList = ["releases", "about", "contact"];
   const [hidden, setHidden] = useState(true);
 
@@ -89,21 +89,16 @@ const Header = () => {
         <FontAwesomeIcon icon={faBars} />
       </BarsMenu>
       <Navigation hidden={hidden}>
-        <Link href="/">
-          <A selected={pathname === "/"}>Home.</A>
+        <Link href="?section=home">
+          <A selected={!query.section || query.section === "home"}>Home.</A>
         </Link>
         {navigationList.map((navigationItem) => (
           <Link
             key={navigationItem}
-            href={"/" + navigationItem}
+            href={"?section=" + navigationItem}
             onClick={() => setHidden(hidden ? false : true)}
           >
-            <A
-              href={"/" + navigationItem}
-              selected={pathname === "/" + navigationItem}
-            >
-              {navigationItem}.
-            </A>
+            <A selected={query.section === navigationItem}>{navigationItem}.</A>
           </Link>
         ))}
       </Navigation>
