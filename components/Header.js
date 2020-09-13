@@ -8,33 +8,27 @@ import styled from "styled-components";
 import config from "../constants/config";
 
 const Container = styled.div`
-  height: ${config.headerSize};
-  flex-grow: 1;
+  padding-top: 80px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  color: ${props => props.theme.secondaryColor};
-  background-color: ${props => props.theme.headerColor};
 `;
+
 const Navigation = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-right: 30px;
+  margin-top: 30px;
   z-index: 20;
   @media only screen and (max-width: 600px) {
-    display: ${props => (props.hidden ? "none" : "flex")};
+    display: ${(props) => (props.hidden ? "none" : "flex")};
     position: absolute;
     flex-direction: column;
-    background-color: ${props => props.theme.headerColor};
+    background-color: ${(props) => props.theme.headerColor};
     right: -20px;
     top: ${config.headerSize};
     transition: opacity 0.5s ease-in-out;
   }
-`;
-const Logo = styled.a`
-  margin-left: 30px;
-  cursor: pointer;
 `;
 
 const A = styled.a`
@@ -44,28 +38,32 @@ const A = styled.a`
   font-size: 14px;
   cursor: pointer;
   position: relative;
-  color: ${props => props.theme.secondaryColor};
+  color: ${(props) => props.theme.primaryColor};
   &:after {
     content: "";
     position: absolute;
-    left: 20%;
+    left: -10%;
     display: inline-block;
     height: 1em;
-    border-bottom: 2px solid;
-    margin-top: 3px;
+    border-bottom: 3px solid;
+    margin-top: 10px;
     transition: width 0.25s;
-    width: ${props => (props.selected ? "60%" : "0")};
+    width: ${(props) => (props.selected ? "120%" : "0")};
   }
   &:hover,
   &:focus,
   &:active {
     &:after {
-      width: 60%;
+      width: 120%;
     }
   }
 `;
 const Img = styled.img`
-  height: 25px;
+  height: 60px;
+  path,
+  image {
+    fill: ${(props) => props.theme.primaryColor};
+  }
 `;
 
 const BarsMenu = styled.div`
@@ -79,30 +77,33 @@ const BarsMenu = styled.div`
 
 const Header = () => {
   const { pathname } = useRouter();
-  const navigationList = ["releases", "about"];
+  const navigationList = ["releases", "about", "contact"];
   const [hidden, setHidden] = useState(true);
 
   return (
     <Container>
       <Link href="/">
-        <Logo>
-          <Img src="static/Logo.svg" alt="logo" />
-        </Logo>
+        <Img src="static/Logo.svg" alt="logo" />
       </Link>
       <BarsMenu onClick={() => setHidden(hidden ? false : true)}>
         <FontAwesomeIcon icon={faBars} />
       </BarsMenu>
       <Navigation hidden={hidden}>
         <Link href="/">
-          <A selected={pathname === "/"}>Home</A>
+          <A selected={pathname === "/"}>Home.</A>
         </Link>
-        {navigationList.map(navigationItem => (
+        {navigationList.map((navigationItem) => (
           <Link
             key={navigationItem}
             href={"/" + navigationItem}
             onClick={() => setHidden(hidden ? false : true)}
           >
-            <A href={"/" + navigationItem} selected={pathname === "/" + navigationItem}>{navigationItem}</A>
+            <A
+              href={"/" + navigationItem}
+              selected={pathname === "/" + navigationItem}
+            >
+              {navigationItem}.
+            </A>
           </Link>
         ))}
       </Navigation>

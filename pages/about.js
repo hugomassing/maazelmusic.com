@@ -1,8 +1,6 @@
-import Markdown from "markdown-to-jsx";
 import styled from "styled-components";
 import Layout from "../components/Layout";
 import Button from "../components/Button";
-import biography from "../constants/biography.md";
 import config from "../constants/config";
 
 const Bio = styled(Markdown)`

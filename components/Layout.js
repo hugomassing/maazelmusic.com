@@ -1,5 +1,6 @@
 import Head from "next/head";
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
+import { normalize } from "polished";
 import { NextSeo } from "next-seo";
 import config from "../constants/config";
 
@@ -11,14 +12,14 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     min-height: 100vh;
     width: 100%;
-    font-family: ${props =>
+    font-family: ${(props) =>
       props.theme.fontFamily}, Arial, Helvetica, sans-serif;
-    color: ${props => props.theme.primaryColor};
-    background-color: ${props => props.theme.secondaryColor};
+    color: ${(props) => props.theme.primaryColor};
+    background-color: ${(props) => props.theme.backgroundColor};
   }
   a {
     text-decoration: none;
-    color: ${props => props.theme.linkColor};
+    color: ${(props) => props.theme.linkColor};
   }
   @keyframes fade-in {
     0% {
@@ -38,25 +39,28 @@ const Container = styled.div`
 
 const Content = styled.div`
   display: flex;
-  flex-direction: ${props => (props.fullWidth ? "row" : "column")};
+  flex-direction: column;
   min-height: calc(100vh - ${config.headerSize} - ${config.footerSize});
-  width: ${props => (props.fullWidth ? "100%" : "80%")};
+  width: 80%;
   margin: 0 auto;
   animation: fade-in 0.5s ease-in-out;
 
   @media only screen and (max-width: 600px) {
-    width: ${props => (props.fullWidth ? "100%" : "90%")};
+    width: ${(props) => (props.fullWidth ? "100%" : "90%")};
   }
 `;
 
-const Layout = props => (
+const Layout = (props) => (
   <div>
     <Head>
       <title>
         {config.htmlTitle} | {props.title}
       </title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      <meta name="google-site-verification" content="Gn_ZwQWQS4QEL1lC4J32wR5VnEbDeCPNwe_nOssPUOM" />
+      <meta
+        name="google-site-verification"
+        content="Gn_ZwQWQS4QEL1lC4J32wR5VnEbDeCPNwe_nOssPUOM"
+      />
       <link
         rel="shortcut icon"
         type="image/x-icon"
@@ -84,7 +88,11 @@ const Layout = props => (
         <GlobalStyles />
         <NextSeo
           title={props.title}
-          canonical={`${config.websiteUrl}${props.title.toLowerCase() === 'home' ? '': props.title.toLowerCase()}`}
+          canonical={`${config.websiteUrl}${
+            props.title.toLowerCase() === "home"
+              ? ""
+              : props.title.toLowerCase()
+          }`}
         />
         <Header />
         <Content {...props}>{props.children}</Content>

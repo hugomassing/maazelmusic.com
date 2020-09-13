@@ -1,62 +1,122 @@
 import styled from "styled-components";
+import Markdown from "markdown-to-jsx";
+
 import Layout from "../components/Layout";
 import Button from "../components/Button";
 import config from "../constants/config";
+import Title from "../components/title";
+import ReleaseCard from "../components/Release";
 
-import { hex2rgba } from "../utils/utils";
+import releases from "../constants/releases";
+import biography from "../constants/biography.md";
 
-const Container = styled.div`
-  width: 100%;
-  background-color: ${props => props.theme.primaryColor};
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url(${config.backgroundUrl});
+const Bio = styled(Markdown)`
+  text-align: justify;
+  align-self: center;
+  margin: 20px 0;
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
+  a {
+    text-decoration: underline;
+  }
 `;
-const Overlay = styled.div`
-  height: 100%;
+
+const Pictures = styled.div`
+  margin: 50px 0;
+  width: 80%;
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+  &:first-child {
+    margin-right: 5px;
+  }
+`;
+
+const BioImg = styled.img`
+  height: 700px;
+  width: 49.5%;
+  object-fit: cover;
+  @media only screen and (max-width: 600px) {
+    height: 250px;
+  }
+`;
+
+const ContactMe = styled.a`
+  align-self: center;
+`;
+
+const Section = styled.div`
+  margin-bottom: 60px;
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  background: linear-gradient(
-    to bottom,
-    ${props => props.theme.primaryColor},
-    ${props => hex2rgba(props.theme.primaryColor, 0.1)}
-  );
-`;
-const Infos = styled.div`
-  color: ${props => props.theme.secondaryColor};
-  margin: 0 10%;
-  width: 60%;
+  color: ${(props) => props.theme.primaryColor};
+  :first-child {
+    margin-top: 60px;
+  }
 `;
 
-const Title = styled.h1`
-  font-size: 50px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin: 10px 0;
+const ReleasesContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px 0;
 `;
-const Tagline = styled.span`
-  font-size: 25px;
+
+const ListenNowButton = styled(Button)`
+  margin-top: 30px;
+`;
+
+const Img = styled.img`
+  height: 300px;
 `;
 
 const Home = () => (
   <Layout fullWidth title="Home">
-    <Container>
-      <Overlay>
-        <Infos>
-          <Title>{config.artistName}</Title>
-          <Tagline>{config.tagline}</Tagline>
-          <a
-            href={config.actionButtonUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button>{config.actionButtonLabel}</Button>
-          </a>
-        </Infos>
-      </Overlay>
-    </Container>
+    <Section>
+      <Img src="static/Maazel_Right_Now_art.jpg" alt="Right Now" />
+      <ListenNowButton
+        href={config.actionButtonUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {config.actionButtonLabel}
+      </ListenNowButton>
+    </Section>
+    <Title>Latest releases</Title>
+    <Section>
+      <ReleasesContainer>
+        {releases &&
+          releases
+            .splice(0, 3)
+            .map((release, index) => (
+              <ReleaseCard key={`${index}_${release.name}`} release={release} />
+            ))}
+      </ReleasesContainer>
+    </Section>
+    <Title>Other releases</Title>
+    <Section>
+      <ReleasesContainer>
+        {releases &&
+          releases
+            .filter((item, i) => i >= 3)
+            .map((release, index) => (
+              <ReleaseCard key={`${index}_${release.name}`} release={release} />
+            ))}
+      </ReleasesContainer>
+    </Section>
+    <Section>
+      <Bio>{biography}</Bio>
+      <ContactMe href={`mailto:${config.contactMail}`}>
+        <Button primary>Contact me</Button>
+      </ContactMe>
+      <Pictures>
+        <BioImg src={config.bioPicture1} />
+        <BioImg src={config.bioPicture2} />
+      </Pictures>
+    </Section>
   </Layout>
 );
 
