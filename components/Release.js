@@ -7,6 +7,9 @@ import Icon from "./Icon";
 
 const Card = styled.div`
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Artwork = styled.div`
@@ -52,6 +55,7 @@ const Infos = styled.div`
   font-size: 16px;
   display: flex;
   flex-direction: column;
+  width: 340px;
 `;
 
 const ReleaseTitle = styled.span`

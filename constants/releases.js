@@ -1,5 +1,49 @@
 const releases = [
   {
+    title: "Hurt Again",
+    artist: "Squired & Maazel & Danni Carra",
+    year: "2020",
+    label: "Proximity",
+    streamUrl: "https://proximity.ffm.to/hurtagain",
+    artworkUrl:
+      "https://i1.sndcdn.com/artworks-ZhnkJOg1yLgBcGMS-RpMRLQ-t500x500.jpg",
+    audio:
+      "https://soundcloud.com/proximity/squired-maazel-danni-carra-hurt-again"
+  },
+  {
+    title: "I'm Fine (Maazel Remix)",
+    artist: "William Black Feat. Nevve",
+    year: "2020",
+    label: "Lowly",
+    streamUrl: "https://lowly.ffm.to/imfine_maazelremix",
+    artworkUrl:
+      "https://i1.sndcdn.com/artworks-UnQhlh2ffT2GqpDt-A9FHPg-t500x500.jpg",
+    audio:
+      "https://soundcloud.com/maazelbeats/william-black-feat-nevve-im-fine-maazel-remix"
+  },
+  {
+    title: "1NIGHT (Maazel & Jupom Remix)",
+    artist: "Yetep & Maazel With GLNNA",
+    year: "2019",
+    label: "Enhanced Music",
+    streamUrl: "http://enhanced.lnk.to/Enhanced426R",
+    artworkUrl:
+      "https://i1.sndcdn.com/artworks-000642731236-99tp67-t500x500.jpg",
+    audio:
+      "https://soundcloud.com/enhanced/yetep-maazel-with-glnna-1night-maazel-jupom-remix-1"
+  },
+  {
+    title: "Kids (Maazel Remix)",
+    artist: "LIONE ft. Miranda Glory",
+    year: "2019",
+    label: "Musical Freedom",
+    streamUrl: "https://fanlink.to/kids-maazel-remix",
+    artworkUrl:
+      "https://i1.sndcdn.com/artworks-000616705774-wuz0pr-t500x500.jpg",
+    audio:
+      "https://soundcloud.com/maazelbeats/lione-ft-miranda-glory-kids-maazel-remix"
+  },
+  {
     title: "1NIGHT",
     artist: "yetep & Maazel feat. GLNNA",
     year: "2019",
