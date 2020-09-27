@@ -27,11 +27,20 @@ const Artwork = styled.div`
       visibility: visible;
     }
   }
+
+  @media only screen and (max-width: 600px) {
+    width: ${(props) => (props.big ? "250px" : "150px")};
+    height: ${(props) => (props.big ? "250px" : "150px")};
+  }
 `;
 
 const Img = styled.img`
   width: ${(props) => (props.big ? "350px" : "250px")};
   transition: filter 0.5s ease-in-out;
+
+  @media only screen and (max-width: 600px) {
+    width: ${(props) => (props.big ? "250px" : "150px")};
+  }
 `;
 
 const Overlay = styled.div`

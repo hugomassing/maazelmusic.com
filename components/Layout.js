@@ -43,6 +43,7 @@ const Container = styled.div`
 const Content = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   min-height: calc(100vh - ${config.headerSize} - ${config.footerSize});
   width: 80%;
   margin: 0 auto;

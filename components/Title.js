@@ -35,6 +35,12 @@ const TitleContainer = styled.h1`
       width: 20%;
     }
   }
+  @media only screen and (max-width: 380px) {
+    ::before,
+    ::after {
+      width: 10%;
+    }
+  }
 `;
 
 export default TitleContainer;

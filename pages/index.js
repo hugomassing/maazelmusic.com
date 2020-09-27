@@ -91,12 +91,12 @@ const Home = () => {
       <Section>
         <ReleaseCard release={releases[0]} big />
         <Button
-          href={config.actionButtonUrl}
+          href={releases[0].streamUrl}
           target="_blank"
           rel="noopener noreferrer"
           gradient
         >
-          Pre-save
+          {releases[0].presave ? "Pre-save" : "Stream"}
         </Button>
       </Section>
       <Title ref={releasesRef}>Latest releases</Title>

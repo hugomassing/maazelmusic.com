@@ -58,10 +58,10 @@ const A = styled.a`
   }
 `;
 const Img = styled.img`
-  height: 60px;
-  path,
-  image {
-    fill: ${(props) => props.theme.primaryColor};
+  width: 500px;
+
+  @media only screen and (max-width: 600px) {
+    width: 300px;
   }
 `;
 
