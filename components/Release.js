@@ -17,7 +17,7 @@ const Artwork = styled.div`
   width: 250px;
   height: 250px;
   position: relative;
-  background-color: ${props => props.theme.primaryColor};
+  background-color: ${(props) => props.theme.primaryColor};
   &:hover {
     img {
       filter: grayscale(100%) brightness(50%);
@@ -65,9 +65,20 @@ const ReleaseTitle = styled.span`
 `;
 
 const ReleaseInfos = styled.span`
+  position: relative;
   margin: 5px;
   font-size: 70%;
   margin-bottom: 10px;
+  margin-top: 20px;
+  ::before {
+    content: "";
+    width: 40px;
+    border-top: 1px solid ${(props) => props.theme.primaryColor};
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    transform: translateX(-50%);
+  }
 `;
 
 const ActionButton = styled(Button)`
@@ -79,7 +90,7 @@ const PlayerControls = styled.div`
   bottom: 50px;
 `;
 
-const CustomPlayer = withSoundCloudAudio(props => {
+const CustomPlayer = withSoundCloudAudio((props) => {
   const { soundCloudAudio, playing, track } = props;
   const play = () => {
     if (playing) {
@@ -100,7 +111,7 @@ const CustomPlayer = withSoundCloudAudio(props => {
   );
 });
 
-const ReleaseCard = props => {
+const ReleaseCard = (props) => {
   const { release } = props;
 
   if (!release) return <></>;

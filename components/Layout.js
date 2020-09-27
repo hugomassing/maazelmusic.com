@@ -8,9 +8,12 @@ import Header from "./Header";
 import Footer from "./Footer";
 
 const GlobalStyles = createGlobalStyle`
+  html { height: 100%; overflow:auto;
+    scroll-behavior: smooth; }
   body {
     margin: 0;
     min-height: 100vh;
+    height: 100%;
     width: 100%;
     font-family: ${(props) =>
       props.theme.fontFamily}, Arial, Helvetica, sans-serif;
@@ -50,56 +53,58 @@ const Content = styled.div`
   }
 `;
 
-const Layout = (props) => (
-  <div>
-    <Head>
-      <title>
-        {config.htmlTitle} | {props.title}
-      </title>
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      <meta
-        name="google-site-verification"
-        content="Gn_ZwQWQS4QEL1lC4J32wR5VnEbDeCPNwe_nOssPUOM"
-      />
-      <link
-        rel="shortcut icon"
-        type="image/x-icon"
-        href="/static/favicon.ico"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="/static/favicon-32x32.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="/static/favicon-16x16.png"
-      />
-      <link
-        href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap"
-        rel="stylesheet"
-      />
-    </Head>
-    <ThemeProvider theme={config.theme}>
-      <Container>
-        <GlobalStyles />
-        <NextSeo
-          title={props.title}
-          canonical={`${config.websiteUrl}${
-            props.title.toLowerCase() === "home"
-              ? ""
-              : props.title.toLowerCase()
-          }`}
+const Layout = ({ refs, ...props }) => {
+  return (
+    <div>
+      <Head>
+        <title>
+          {config.htmlTitle} | {props.title}
+        </title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="google-site-verification"
+          content="Gn_ZwQWQS4QEL1lC4J32wR5VnEbDeCPNwe_nOssPUOM"
         />
-        <Header />
-        <Content {...props}>{props.children}</Content>
-        <Footer />
-      </Container>
-    </ThemeProvider>
-  </div>
-);
+        <link
+          rel="shortcut icon"
+          type="image/x-icon"
+          href="/static/favicon.ico"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/static/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/static/favicon-16x16.png"
+        />
+        <link
+          href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
+      <ThemeProvider theme={config.theme}>
+        <Container>
+          <GlobalStyles />
+          <NextSeo
+            title={props.title}
+            canonical={`${config.websiteUrl}${
+              props.title.toLowerCase() === "home"
+                ? ""
+                : props.title.toLowerCase()
+            }`}
+          />
+          <Header refs={refs} />
+          <Content {...props}>{props.children}</Content>
+          <Footer />
+        </Container>
+      </ThemeProvider>
+    </div>
+  );
+};
 
 export default Layout;

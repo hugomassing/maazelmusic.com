@@ -29,9 +29,11 @@ const SEO = {
 const theme = {
   fontFamily: "Roboto",
   linkColor: "#000000",
-  primaryColor: "#E35A7A",
+  primaryColor: "#D9536B",
+  primaryGradient:
+    "linear-gradient(104.29deg, #D9536B -13.54%, #7B588D 353.63%)",
   secondaryColor: "#F2F2F2",
-  backgroundColor: "#EBE7E3",
+  backgroundColor: "#EEE9e4",
   headerColor: "#090909",
   footerColor: "#090909",
 };

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const ButtonContainer = styled.button`
   display: block;
@@ -14,6 +14,12 @@ const ButtonContainer = styled.button`
   color: ${(props) =>
     props.primary ? props.theme.secondaryColor : props.theme.secondaryColor};
   text-decoration: none;
+
+  ${(props) =>
+    props.gradient &&
+    css`
+      background-color: ${(props) => props.theme.primaryGradient};
+    `}
 `;
 
 const Button = (props) => {

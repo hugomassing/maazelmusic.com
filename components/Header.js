@@ -75,7 +75,9 @@ const BarsMenu = styled.div`
   }
 `;
 
-const Header = () => {
+const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop - 30);
+
+const Header = ({ refs }) => {
   const { pathname, query } = useRouter();
   const navigationList = ["releases", "about", "contact"];
   const [hidden, setHidden] = useState(true);
@@ -89,17 +91,16 @@ const Header = () => {
         <FontAwesomeIcon icon={faBars} />
       </BarsMenu>
       <Navigation hidden={hidden}>
-        <Link href="?section=home">
-          <A selected={!query.section || query.section === "home"}>Home.</A>
-        </Link>
         {navigationList.map((navigationItem) => (
-          <Link
-            key={navigationItem}
-            href={"?section=" + navigationItem}
-            onClick={() => setHidden(hidden ? false : true)}
+          <A
+            href={`#${navigationItem}`}
+            onClick={() => {
+              scrollToRef(refs[navigationItem]);
+              setHidden(hidden ? false : true);
+            }}
           >
-            <A selected={query.section === navigationItem}>{navigationItem}.</A>
-          </Link>
+            {navigationItem}.
+          </A>
         ))}
       </Navigation>
     </Container>

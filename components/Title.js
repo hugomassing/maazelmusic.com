@@ -24,8 +24,4 @@ const TitleContainer = styled.h1`
   }
 `;
 
-const Button = (props) => {
-  return <TitleContainer {...props}>{props.children}</TitleContainer>;
-};
-
-export default Button;
+export default TitleContainer;

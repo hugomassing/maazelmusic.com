@@ -1,5 +1,14 @@
 const releases = [
   {
+    title: "Right Now",
+    artist: "Maazel feat. glasscat",
+    year: "2020",
+    label: "Monstercat",
+    streamUrl: "",
+    artworkUrl: "static/Maazel_Right_Now_art.jpg",
+    audio: "",
+  },
+  {
     title: "Hurt Again",
     artist: "Squired & Maazel & Danni Carra",
     year: "2020",

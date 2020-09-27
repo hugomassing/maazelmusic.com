@@ -1,3 +1,5 @@
+import { useRef } from "react";
+
 import styled from "styled-components";
 import Markdown from "markdown-to-jsx";
 
@@ -31,6 +33,7 @@ const Bio = styled(Markdown)`
   }
   a {
     text-decoration: underline;
+    color: ${(props) => props.theme.primaryColor};
   }
 `;
 
@@ -72,52 +75,81 @@ const Img = styled.img`
   height: 300px;
 `;
 
-const Home = () => (
-  <Layout fullWidth title="Home">
-    <Section>
-      <Img src="static/Maazel_Right_Now_art.jpg" alt="Right Now" />
-      <ListenNowButton
-        href={config.actionButtonUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {config.actionButtonLabel}
-      </ListenNowButton>
-    </Section>
-    <Title>Latest releases</Title>
-    <Section>
-      <ReleasesContainer>
-        {releases &&
-          releases
-            .filter((item, i) => i < 3)
-            .map((release, index) => (
-              <ReleaseCard key={`${index}_${release.name}`} release={release} />
-            ))}
-      </ReleasesContainer>
-    </Section>
-    <Title>Other releases</Title>
-    <Section>
-      <ReleasesContainer>
-        {releases &&
-          releases
-            .filter((item, i) => i >= 3)
-            .map((release, index) => (
-              <ReleaseCard key={`${index}_${release.name}`} release={release} />
-            ))}
-      </ReleasesContainer>
-    </Section>
-    <Title>About Maazel</Title>
-    <Section>
-      <Bio>{biography}</Bio>
-      <Pictures>
-        <BioImg src={config.bioPicture1} />
-        <BioImg src={config.bioPicture2} />
-      </Pictures>
-      <ContactMe href={`mailto:${config.contactMail}`}>
-        <Button primary>Send a email</Button>
-      </ContactMe>
-    </Section>
-  </Layout>
-);
+const Home = () => {
+  const aboutRef = useRef(null);
+  const contactRef = useRef(null);
+  const releasesRef = useRef(null);
+
+  const refs = {
+    about: aboutRef,
+    releases: releasesRef,
+    contact: contactRef,
+  };
+
+  return (
+    <Layout fullWidth title="Home" refs={refs}>
+      <Section>
+        <ReleaseCard release={releases[0]} />
+        <Button
+          href={config.actionButtonUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          gradient
+        >
+          Pre-save
+        </Button>
+      </Section>
+      <Title ref={releasesRef}>Latest releases</Title>
+      <Section>
+        <ReleasesContainer>
+          {releases &&
+            releases
+              .filter((item, i) => i !== 0 && i < 3)
+              .map((release, index) => (
+                <ReleaseCard
+                  key={`${index}_${release.name}`}
+                  release={release}
+                />
+              ))}
+        </ReleasesContainer>
+      </Section>
+      <Title>Other releases</Title>
+      <Section>
+        <ReleasesContainer>
+          {releases &&
+            releases
+              .filter((item, i) => i >= 4)
+              .map((release, index) => (
+                <ReleaseCard
+                  key={`${index}_${release.name}`}
+                  release={release}
+                />
+              ))}
+          <ListenNowButton
+            href={config.actionButtonUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            gradient
+          >
+            Listen more
+          </ListenNowButton>
+        </ReleasesContainer>
+      </Section>
+      <Title ref={aboutRef}>About Maazel</Title>
+      <Section>
+        <Bio>{biography}</Bio>
+        <Pictures>
+          <BioImg src={config.bioPicture1} />
+          <BioImg src={config.bioPicture2} />
+        </Pictures>
+        <ContactMe ref={contactRef} href={`mailto:${config.contactMail}`}>
+          <Button primary gradient>
+            Send a email
+          </Button>
+        </ContactMe>
+      </Section>
+    </Layout>
+  );
+};
 
 export default Home;
