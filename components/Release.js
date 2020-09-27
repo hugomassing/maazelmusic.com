@@ -14,8 +14,8 @@ const Card = styled.div`
 
 const Artwork = styled.div`
   margin: 15px 50px;
-  width: 250px;
-  height: 250px;
+  width: ${(props) => (props.big ? "350px" : "250px")};
+  height: ${(props) => (props.big ? "350px" : "250px")};
   position: relative;
   background-color: ${(props) => props.theme.primaryColor};
   &:hover {
@@ -30,7 +30,7 @@ const Artwork = styled.div`
 `;
 
 const Img = styled.img`
-  width: 250px;
+  width: ${(props) => (props.big ? "350px" : "250px")};
   transition: filter 0.5s ease-in-out;
 `;
 
@@ -55,12 +55,12 @@ const Infos = styled.div`
   font-size: 16px;
   display: flex;
   flex-direction: column;
-  width: 340px;
+  width: ${(props) => (props.big ? "440px" : "340px")};
 `;
 
 const ReleaseTitle = styled.span`
   margin: 5px 0;
-  font-size: 200%;
+  font-size: 150%;
   font-weight: bold;
 `;
 
@@ -112,14 +112,14 @@ const CustomPlayer = withSoundCloudAudio((props) => {
 });
 
 const ReleaseCard = (props) => {
-  const { release } = props;
+  const { release, big } = props;
 
   if (!release) return <></>;
 
   return (
     <Card>
-      <Artwork>
-        <Img src={release.artworkUrl} />
+      <Artwork big={big}>
+        <Img src={release.artworkUrl} big={big} />
         <Overlay>
           <a href={release.streamUrl} target="_blank" rel="noopener noreferrer">
             <ActionButton>Stream</ActionButton>
@@ -130,7 +130,7 @@ const ReleaseCard = (props) => {
           />
         </Overlay>
       </Artwork>
-      <Infos>
+      <Infos big={big}>
         <ReleaseTitle>{release.title}</ReleaseTitle>
         <span>{release.artist}</span>
         <ReleaseInfos>

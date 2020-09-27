@@ -6,7 +6,7 @@ import Markdown from "markdown-to-jsx";
 import Layout from "../components/Layout";
 import Button from "../components/Button";
 import config from "../constants/config";
-import Title from "../components/title";
+import Title from "../components/Title";
 import ReleaseCard from "../components/Release";
 
 import releases from "../constants/releases";
@@ -89,7 +89,7 @@ const Home = () => {
   return (
     <Layout fullWidth title="Home" refs={refs}>
       <Section>
-        <ReleaseCard release={releases[0]} />
+        <ReleaseCard release={releases[0]} big />
         <Button
           href={config.actionButtonUrl}
           target="_blank"
@@ -104,7 +104,7 @@ const Home = () => {
         <ReleasesContainer>
           {releases &&
             releases
-              .filter((item, i) => i !== 0 && i < 3)
+              .filter((item, i) => i !== 0 && i < 4)
               .map((release, index) => (
                 <ReleaseCard
                   key={`${index}_${release.name}`}
@@ -125,15 +125,16 @@ const Home = () => {
                   release={release}
                 />
               ))}
-          <ListenNowButton
-            href={config.actionButtonUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            gradient
-          >
-            Listen more
-          </ListenNowButton>
         </ReleasesContainer>
+
+        <ListenNowButton
+          href={config.actionButtonUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          gradient
+        >
+          Listen more
+        </ListenNowButton>
       </Section>
       <Title ref={aboutRef}>About Maazel</Title>
       <Section>
@@ -144,7 +145,7 @@ const Home = () => {
         </Pictures>
         <ContactMe ref={contactRef} href={`mailto:${config.contactMail}`}>
           <Button primary gradient>
-            Send a email
+            Send an email
           </Button>
         </ContactMe>
       </Section>
