@@ -90,14 +90,20 @@ const Home = () => {
     <Layout fullWidth title="Home" refs={refs}>
       <Section>
         <ReleaseCard release={releases[0]} big />
-        <Button
+        <a
           href={releases[0].streamUrl}
           target="_blank"
           rel="noopener noreferrer"
-          gradient
         >
-          {releases[0].presave ? "Pre-save" : "Stream"}
-        </Button>
+          <Button
+            href={releases[0].streamUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            gradient
+          >
+            {releases[0].presave ? "Pre-save" : "Stream"}
+          </Button>
+        </a>
       </Section>
       <Title ref={releasesRef}>Latest releases</Title>
       <Section>
