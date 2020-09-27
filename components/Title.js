@@ -22,6 +22,19 @@ const TitleContainer = styled.h1`
     position: absolute;
     transform: translateY(-50%);
   }
+
+  @media only screen and (max-width: 900px) {
+    ::before,
+    ::after {
+      width: 25%;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    ::before,
+    ::after {
+      width: 20%;
+    }
+  }
 `;
 
 export default TitleContainer;

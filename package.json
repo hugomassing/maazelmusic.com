@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "next",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
-    "export": "npm run build && next export",
     "deploy": "touch out/.nojekyll && gh-pages -t -d out"
   },
   "keywords": [],

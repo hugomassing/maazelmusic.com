@@ -1,14 +1,12 @@
 import Link from "next/link";
 import React, { useState } from "react";
-import { useRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 import styled from "styled-components";
-import config from "../constants/config";
 
 const Container = styled.div`
-  padding-top: 80px;
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,8 +23,9 @@ const Navigation = styled.div`
     position: absolute;
     flex-direction: column;
     background-color: ${(props) => props.theme.headerColor};
-    right: -20px;
-    top: ${config.headerSize};
+    right: 0;
+    top: 0;
+    margin-top: 48px;
     transition: opacity 0.5s ease-in-out;
   }
 `;
@@ -67,18 +66,19 @@ const Img = styled.img`
 `;
 
 const BarsMenu = styled.div`
+  position: absolute;
+  top: 8px;
+  right: 8px;
   display: none;
   @media only screen and (max-width: 600px) {
     display: block;
     font-size: 30px;
-    margin-right: 50px;
   }
 `;
 
 const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop - 30);
 
 const Header = ({ refs }) => {
-  const { pathname, query } = useRouter();
   const navigationList = ["releases", "about", "contact"];
   const [hidden, setHidden] = useState(true);
 
@@ -88,11 +88,12 @@ const Header = ({ refs }) => {
         <Img src="static/Logo.svg" alt="logo" />
       </Link>
       <BarsMenu onClick={() => setHidden(hidden ? false : true)}>
-        <FontAwesomeIcon icon={faBars} />
+        <FontAwesomeIcon height="32px" width="32px" icon={faBars} />
       </BarsMenu>
       <Navigation hidden={hidden}>
         {navigationList.map((navigationItem) => (
           <A
+            key={navigationItem}
             href={`#${navigationItem}`}
             onClick={() => {
               scrollToRef(refs[navigationItem]);
