@@ -49,7 +49,7 @@ const Content = styled.div`
   animation: fade-in 0.5s ease-in-out;
 
   @media only screen and (max-width: 600px) {
-    width: ${(props) => (props.fullWidth ? "100%" : "90%")};
+    width: 90%;
   }
 `;
 

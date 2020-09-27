@@ -60,7 +60,7 @@ const Infos = styled.div`
 
 const ReleaseTitle = styled.span`
   margin: 5px 0;
-  font-size: 150%;
+  font-size: ${(props) => (props.big ? "250%" : "150%")};
   font-weight: bold;
 `;
 
@@ -122,12 +122,16 @@ const ReleaseCard = (props) => {
         <Img src={release.artworkUrl} big={big} />
         <Overlay>
           <a href={release.streamUrl} target="_blank" rel="noopener noreferrer">
-            <ActionButton>Stream</ActionButton>
+            <ActionButton>
+              {release.presave ? "Pre-save" : "Stream"}
+            </ActionButton>
           </a>
-          <CustomPlayer
-            resolveUrl={release.audio}
-            clientId={"25a6312cd0379dbf2b4d8fce66d4f112"}
-          />
+          {!release.presave && (
+            <CustomPlayer
+              resolveUrl={release.audio}
+              clientId={"25a6312cd0379dbf2b4d8fce66d4f112"}
+            />
+          )}
         </Overlay>
       </Artwork>
       <Infos big={big}>

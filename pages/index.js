@@ -39,7 +39,7 @@ const Bio = styled(Markdown)`
 
 const Pictures = styled.div`
   margin: 50px 60px;
-  width: 80%;
+  width: 100%;
   display: flex;
   align-self: center;
   justify-content: space-between;

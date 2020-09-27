@@ -4,9 +4,10 @@ const releases = [
     artist: "Maazel feat. glasscat",
     year: "2020",
     label: "Monstercat",
-    streamUrl: "",
+    streamUrl: "https://monstercat.ffm.to/rightnow-mvr1",
     artworkUrl: "static/Maazel_Right_Now_art.jpg",
     audio: "",
+    presave: true,
   },
   {
     title: "Hurt Again",

@@ -4,7 +4,7 @@ import Icon from "../components/Icon";
 import config from "../constants/config";
 
 import {
-  faFacebookSquare,
+  faFacebookF,
   faTwitter,
   faSoundcloud,
   faInstagram,
@@ -20,10 +20,12 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
   color: ${(props) => props.theme.primaryColor};
+  margin: 32px 0;
 `;
 const Navigation = styled.div`
   display: flex;
   align-items: center;
+  margin-top: 16px;
 `;
 
 const Copyright = styled.span``;
@@ -35,7 +37,7 @@ const Footer = () => {
     <Container>
       <Copyright>© 2020 Maazel / qatataq</Copyright>
       <Navigation>
-        <Icon link={links.facebook} icon={faFacebookSquare}></Icon>
+        <Icon link={links.facebook} icon={faFacebookF}></Icon>
         <Icon link={links.twitter} icon={faTwitter}></Icon>
         <Icon link={links.instagram} icon={faInstagram}></Icon>
         <Icon link={links.soundcloud} icon={faSoundcloud}></Icon>
