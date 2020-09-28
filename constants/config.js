@@ -12,10 +12,10 @@ const SEO = {
     locale: "en_US",
     images: [
       {
-        url: "http://www.maazelmusic.com/static/og-image.jpg",
+        url: "http://www.maazelmusic.com/og-image.jpg",
         width: 800,
         height: 600,
-        alt: "Og Image Alt",
+        alt: "Maazel",
       },
     ],
   },
