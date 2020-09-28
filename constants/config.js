@@ -12,28 +12,30 @@ const SEO = {
     locale: "en_US",
     images: [
       {
-        url:
-          "http://www.maazelmusic.com/static/og-image.jpg",
+        url: "http://www.maazelmusic.com/static/og-image.jpg",
         width: 800,
         height: 600,
-        alt: "Og Image Alt"
-      }
-    ]
+        alt: "Og Image Alt",
+      },
+    ],
   },
   twitter: {
     handle: "@maazelmusic",
     site: "@maazelmusic",
-    cardType: "summary_large_image"
-  }
+    cardType: "summary_large_image",
+  },
 };
 
 const theme = {
   fontFamily: "Roboto",
   linkColor: "#000000",
-  primaryColor: "#090909",
+  primaryColor: "#D9536B",
+  primaryGradient:
+    "linear-gradient(104.29deg, #D9536B -13.54%, #7B588D 353.63%)",
   secondaryColor: "#F2F2F2",
+  backgroundColor: "#EEE9e4",
   headerColor: "#090909",
-  footerColor: "#090909"
+  footerColor: "#090909",
 };
 
 const config = {
@@ -60,8 +62,8 @@ const config = {
     spotify:
       "https://open.spotify.com/artist/4w5LgUT6bfJnNq6wSFbND7?si=qUQb_vdlSB6XhBog780Hyg",
     appleMusic: "https://music.apple.com/fr/artist/maazel/1148087232",
-    soundcloud: "https://soundcloud.com/maazelbeats"
-  }
+    soundcloud: "https://soundcloud.com/maazelbeats",
+  },
 };
 
 export default config;

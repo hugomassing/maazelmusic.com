@@ -13,11 +13,12 @@ const Card = styled.div`
 `;
 
 const Artwork = styled.div`
-  margin: 15px 50px;
-  width: 250px;
-  height: 250px;
+  margin: 25px 50px;
+  width: ${(props) => (props.big ? "350px" : "250px")};
+  height: ${(props) => (props.big ? "350px" : "250px")};
   position: relative;
-  background-color: ${props => props.theme.primaryColor};
+  background-color: ${(props) => props.theme.primaryColor};
+  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.35));
   &:hover {
     img {
       filter: grayscale(100%) brightness(50%);
@@ -27,11 +28,20 @@ const Artwork = styled.div`
       visibility: visible;
     }
   }
+
+  @media only screen and (max-width: 600px) {
+    width: ${(props) => (props.big ? "250px" : "150px")};
+    height: ${(props) => (props.big ? "250px" : "150px")};
+  }
 `;
 
 const Img = styled.img`
-  width: 250px;
-  transition: filter 0.5s ease-in-out;
+  width: ${(props) => (props.big ? "350px" : "250px")};
+  transition: filter 0.3s ease-in-out;
+
+  @media only screen and (max-width: 600px) {
+    width: ${(props) => (props.big ? "250px" : "150px")};
+  }
 `;
 
 const Overlay = styled.div`
@@ -47,7 +57,7 @@ const Overlay = styled.div`
   position: absolute;
   visibility: hidden;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 `;
 
 const Infos = styled.div`
@@ -55,19 +65,30 @@ const Infos = styled.div`
   font-size: 16px;
   display: flex;
   flex-direction: column;
-  width: 340px;
+  width: ${(props) => (props.big ? "440px" : "340px")};
 `;
 
 const ReleaseTitle = styled.span`
   margin: 5px 0;
-  font-size: 200%;
+  font-size: ${(props) => (props.big ? "250%" : "150%")};
   font-weight: bold;
 `;
 
 const ReleaseInfos = styled.span`
+  position: relative;
   margin: 5px;
   font-size: 70%;
   margin-bottom: 10px;
+  margin-top: 20px;
+  ::before {
+    content: "";
+    width: 40px;
+    border-top: 1px solid ${(props) => props.theme.primaryColor};
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    transform: translateX(-50%);
+  }
 `;
 
 const ActionButton = styled(Button)`
@@ -79,7 +100,11 @@ const PlayerControls = styled.div`
   bottom: 50px;
 `;
 
-const CustomPlayer = withSoundCloudAudio(props => {
+const A = styled.a`
+  color: ${(props) => props.theme.primaryColor};
+`;
+
+const CustomPlayer = withSoundCloudAudio((props) => {
   const { soundCloudAudio, playing, track } = props;
   const play = () => {
     if (playing) {
@@ -95,32 +120,38 @@ const CustomPlayer = withSoundCloudAudio(props => {
 
   return (
     <PlayerControls onClick={() => play()}>
-      <Icon icon={playing ? faPause : faPlay} />
+      <Icon icon={playing ? faPause : faPlay} background={false} />
     </PlayerControls>
   );
 });
 
-const ReleaseCard = props => {
-  const { release } = props;
+const ReleaseCard = (props) => {
+  const { release, big } = props;
 
   if (!release) return <></>;
 
   return (
     <Card>
-      <Artwork>
-        <Img src={release.artworkUrl} />
+      <Artwork big={big}>
+        <Img src={release.artworkUrl} big={big} />
         <Overlay>
           <a href={release.streamUrl} target="_blank" rel="noopener noreferrer">
-            <ActionButton>Stream</ActionButton>
+            <ActionButton>
+              {release.presave ? "Pre-save" : "Stream"}
+            </ActionButton>
           </a>
-          <CustomPlayer
-            resolveUrl={release.audio}
-            clientId={"25a6312cd0379dbf2b4d8fce66d4f112"}
-          />
+          {!release.presave && (
+            <CustomPlayer
+              resolveUrl={release.audio}
+              clientId={"25a6312cd0379dbf2b4d8fce66d4f112"}
+            />
+          )}
         </Overlay>
       </Artwork>
-      <Infos>
-        <ReleaseTitle>{release.title}</ReleaseTitle>
+      <Infos big={big}>
+        <A href={release.streamUrl} target="_blank" rel="noopener noreferrer">
+          <ReleaseTitle>{release.title}</ReleaseTitle>
+        </A>
         <span>{release.artist}</span>
         <ReleaseInfos>
           {release.label} - {release.year}

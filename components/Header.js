@@ -1,40 +1,54 @@
 import Link from "next/link";
 import React, { useState } from "react";
-import { useRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 import styled from "styled-components";
-import config from "../constants/config";
 
 const Container = styled.div`
-  height: ${config.headerSize};
-  flex-grow: 1;
+  margin-top: 80px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  color: ${props => props.theme.secondaryColor};
-  background-color: ${props => props.theme.headerColor};
 `;
+
 const Navigation = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-right: 30px;
+  margin-top: 60px;
   z-index: 20;
   @media only screen and (max-width: 600px) {
-    display: ${props => (props.hidden ? "none" : "flex")};
+    display: ${(props) => (props.hidden ? "none" : "flex")};
     position: absolute;
     flex-direction: column;
-    background-color: ${props => props.theme.headerColor};
-    right: -20px;
-    top: ${config.headerSize};
+    background-color: ${(props) => props.theme.headerColor};
+    right: 0;
+    top: 0;
+    margin-top: 48px;
     transition: opacity 0.5s ease-in-out;
   }
-`;
-const Logo = styled.a`
-  margin-left: 30px;
-  cursor: pointer;
+
+  :before,
+  :after {
+    position: absolute;
+    content: " ";
+    height: 8px;
+    width: 16px;
+    height: 16px;
+    background-color: #333;
+    background: url("static/cancel.svg");
+    transform: rotate(45deg) scale(0.5);
+  }
+  :before {
+    top: -8px;
+    left: -64px;
+  }
+  :after {
+    bottom: -8px;
+    right: -64px;
+  }
 `;
 
 const A = styled.a`
@@ -44,66 +58,69 @@ const A = styled.a`
   font-size: 14px;
   cursor: pointer;
   position: relative;
-  color: ${props => props.theme.secondaryColor};
+  color: ${(props) => props.theme.primaryColor};
   &:after {
     content: "";
     position: absolute;
-    left: 20%;
+    left: -10%;
     display: inline-block;
     height: 1em;
-    border-bottom: 2px solid;
-    margin-top: 3px;
+    border-bottom: 3px solid;
+    margin-top: 10px;
     transition: width 0.25s;
-    width: ${props => (props.selected ? "60%" : "0")};
+    width: ${(props) => (props.selected ? "120%" : "0")};
   }
-  &:hover,
-  &:focus,
-  &:active {
+  &:hover {
     &:after {
-      width: 60%;
+      width: 120%;
     }
   }
 `;
 const Img = styled.img`
-  height: 25px;
+  width: 500px;
+
+  @media only screen and (max-width: 600px) {
+    width: 300px;
+  }
 `;
 
 const BarsMenu = styled.div`
+  position: absolute;
+  top: 8px;
+  right: 8px;
   display: none;
   @media only screen and (max-width: 600px) {
     display: block;
     font-size: 30px;
-    margin-right: 50px;
   }
 `;
 
-const Header = () => {
-  const { pathname } = useRouter();
-  const navigationList = ["releases", "about"];
+const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop - 30);
+
+const Header = ({ refs }) => {
+  const navigationList = ["releases", "about", "contact"];
   const [hidden, setHidden] = useState(true);
 
   return (
     <Container>
       <Link href="/">
-        <Logo>
-          <Img src="static/Logo.svg" alt="logo" />
-        </Logo>
+        <Img src="static/Logo.svg" alt="logo" />
       </Link>
       <BarsMenu onClick={() => setHidden(hidden ? false : true)}>
-        <FontAwesomeIcon icon={faBars} />
+        <FontAwesomeIcon height="32px" width="32px" icon={faBars} />
       </BarsMenu>
       <Navigation hidden={hidden}>
-        <Link href="/">
-          <A selected={pathname === "/"}>Home</A>
-        </Link>
-        {navigationList.map(navigationItem => (
-          <Link
+        {navigationList.map((navigationItem) => (
+          <A
             key={navigationItem}
-            href={"/" + navigationItem}
-            onClick={() => setHidden(hidden ? false : true)}
+            href={`#${navigationItem}`}
+            onClick={() => {
+              scrollToRef(refs[navigationItem]);
+              setHidden(hidden ? false : true);
+            }}
           >
-            <A href={"/" + navigationItem} selected={pathname === "/" + navigationItem}>{navigationItem}</A>
-          </Link>
+            {navigationItem}.
+          </A>
         ))}
       </Navigation>
     </Container>
