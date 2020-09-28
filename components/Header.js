@@ -70,9 +70,7 @@ const A = styled.a`
     transition: width 0.25s;
     width: ${(props) => (props.selected ? "120%" : "0")};
   }
-  &:hover,
-  &:focus,
-  &:active {
+  &:hover {
     &:after {
       width: 120%;
     }
