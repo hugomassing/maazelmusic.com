@@ -13,11 +13,12 @@ const Card = styled.div`
 `;
 
 const Artwork = styled.div`
-  margin: 15px 50px;
+  margin: 25px 50px;
   width: ${(props) => (props.big ? "350px" : "250px")};
   height: ${(props) => (props.big ? "350px" : "250px")};
   position: relative;
   background-color: ${(props) => props.theme.primaryColor};
+  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.35));
   &:hover {
     img {
       filter: grayscale(100%) brightness(50%);
@@ -36,7 +37,7 @@ const Artwork = styled.div`
 
 const Img = styled.img`
   width: ${(props) => (props.big ? "350px" : "250px")};
-  transition: filter 0.5s ease-in-out;
+  transition: filter 0.3s ease-in-out;
 
   @media only screen and (max-width: 600px) {
     width: ${(props) => (props.big ? "250px" : "150px")};
@@ -56,7 +57,7 @@ const Overlay = styled.div`
   position: absolute;
   visibility: hidden;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 `;
 
 const Infos = styled.div`
@@ -99,6 +100,10 @@ const PlayerControls = styled.div`
   bottom: 50px;
 `;
 
+const A = styled.a`
+  color: ${(props) => props.theme.primaryColor};
+`;
+
 const CustomPlayer = withSoundCloudAudio((props) => {
   const { soundCloudAudio, playing, track } = props;
   const play = () => {
@@ -115,7 +120,7 @@ const CustomPlayer = withSoundCloudAudio((props) => {
 
   return (
     <PlayerControls onClick={() => play()}>
-      <Icon icon={playing ? faPause : faPlay} />
+      <Icon icon={playing ? faPause : faPlay} background={false} />
     </PlayerControls>
   );
 });
@@ -144,7 +149,9 @@ const ReleaseCard = (props) => {
         </Overlay>
       </Artwork>
       <Infos big={big}>
-        <ReleaseTitle>{release.title}</ReleaseTitle>
+        <A href={release.streamUrl} target="_blank" rel="noopener noreferrer">
+          <ReleaseTitle>{release.title}</ReleaseTitle>
+        </A>
         <span>{release.artist}</span>
         <ReleaseInfos>
           {release.label} - {release.year}

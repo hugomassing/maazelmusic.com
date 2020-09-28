@@ -52,6 +52,8 @@ const BioImg = styled.img`
   height: 700px;
   width: 49.5%;
   object-fit: cover;
+
+  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.35));
   @media only screen and (max-width: 600px) {
     height: 250px;
   }
@@ -69,10 +71,6 @@ const ReleasesContainer = styled.div`
 
 const ListenNowButton = styled(Button)`
   margin-top: 30px;
-`;
-
-const Img = styled.img`
-  height: 300px;
 `;
 
 const Home = () => {

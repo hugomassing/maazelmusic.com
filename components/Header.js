@@ -13,10 +13,11 @@ const Container = styled.div`
 `;
 
 const Navigation = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-top: 30px;
+  margin-top: 60px;
   z-index: 20;
   @media only screen and (max-width: 600px) {
     display: ${(props) => (props.hidden ? "none" : "flex")};
@@ -27,6 +28,26 @@ const Navigation = styled.div`
     top: 0;
     margin-top: 48px;
     transition: opacity 0.5s ease-in-out;
+  }
+
+  :before,
+  :after {
+    position: absolute;
+    content: " ";
+    height: 8px;
+    width: 16px;
+    height: 16px;
+    background-color: #333;
+    background: url("static/cancel.svg");
+    transform: rotate(45deg) scale(0.5);
+  }
+  :before {
+    top: -8px;
+    left: -64px;
+  }
+  :after {
+    bottom: -8px;
+    right: -64px;
   }
 `;
 

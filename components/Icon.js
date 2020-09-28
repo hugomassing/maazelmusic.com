@@ -6,7 +6,7 @@ const SocialIcon = styled.a`
   margin: 0 5px;
   height: 32px;
   width: 32px;
-  background-color: ${(props) => props.theme.primaryColor};
+  background-color: ${(props) => props.background && props.theme.primaryColor};
   border-radius: 50%;
   font-size: 12px;
   display: flex;
@@ -17,10 +17,15 @@ const SocialIcon = styled.a`
   }
 `;
 
-const Icon = (props) => {
+const Icon = ({ background = true, link, icon }) => {
   return (
-    <SocialIcon target="_blank" rel="noopener noreferrer" href={props.link}>
-      <FontAwesomeIcon height="16px" width="16px" icon={props.icon} border />
+    <SocialIcon
+      target="_blank"
+      rel="noopener noreferrer"
+      href={link}
+      background={background}
+    >
+      <FontAwesomeIcon height="16px" width="16px" icon={icon} border />
     </SocialIcon>
   );
 };

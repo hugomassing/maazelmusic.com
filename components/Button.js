@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { darken } from "polished";
 
 const ButtonContainer = styled.button`
   display: block;
@@ -14,7 +15,6 @@ const ButtonContainer = styled.button`
   color: ${(props) =>
     props.primary ? props.theme.secondaryColor : props.theme.secondaryColor};
   text-decoration: none;
-
   ${(props) =>
     props.gradient &&
     css`
