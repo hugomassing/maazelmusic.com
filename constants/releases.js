@@ -7,7 +7,6 @@ const releases = [
     streamUrl: "https://monstercat.ffm.to/rightnow-mvr1",
     artworkUrl: "static/Maazel_Right_Now_art.jpg",
     audio: "",
-    presave: true,
   },
   {
     title: "Hurt Again",
