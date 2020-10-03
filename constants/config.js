@@ -1,7 +1,7 @@
 const SEO = {
   description:
     "Behind Maazel lies a Paris-based genre-bending/multi-instrumentalist producer that started the project in 2015, mainly focusing on making emotional electronic music.",
-  titleTemplate: "Maazel - Official website",
+  titleTemplate: "Maazel - Electronic music producer",
   additionalMetaTags: "",
   openGraph: {
     // what's displayed on social networks when sharing the website
