@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
-const TitleContainer = styled.h2`
-  font-size: 200%;
+const TitleContainer = styled.h1`
   width: 100%;
   text-align: center;
   position: relative;
