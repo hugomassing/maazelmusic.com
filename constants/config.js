@@ -1,6 +1,6 @@
 const SEO = {
   description:
-    "Behind Maazel lies a Paris-based genre-bending/multi-instrumentalist producer that started the project in 2015, mainly focusing on making emotional electronic music.",
+    "Behind Maazel lies a Paris based genre bending/multi-instrumentalist producer and DJ, mainly focusing on making emotional electronic music.",
   titleTemplate: "Maazel - Electronic music producer",
   additionalMetaTags: "",
   openGraph: {
