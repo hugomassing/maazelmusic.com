@@ -73,6 +73,13 @@ const ListenNowButton = styled(Button)`
   margin-top: 30px;
 `;
 
+const getEmail = (reversedEmail) => {
+  location.href = `mailto:${reversedEmail
+    .split("")
+    .reverse()
+    .join("")}?subject=About Maazel`;
+};
+
 const Home = () => {
   const aboutRef = useRef(null);
   const contactRef = useRef(null);
@@ -147,7 +154,10 @@ const Home = () => {
           <BioImg src={config.bioPicture1} alt="Maazel press picture" />
           <BioImg src={config.bioPicture2} alt="Maazel press picture" />
         </Pictures>
-        <ContactMe ref={contactRef} href={`mailto:${config.contactMail}`}>
+        <ContactMe
+          ref={contactRef}
+          onClick={() => getEmail(config.reversedContactMail)}
+        >
           <Button primary gradient>
             Send an email
           </Button>

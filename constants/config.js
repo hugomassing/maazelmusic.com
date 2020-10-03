@@ -7,12 +7,12 @@ const SEO = {
     // what's displayed on social networks when sharing the website
     title: "Maazel - Creating Emotional Music",
     type: "website",
-    url: "https://www.maazelmusic.com/",
+    url: "https://maazelmusic.com/",
     site_name: "Maazel Music",
     locale: "en_US",
     images: [
       {
-        url: "http://www.maazelmusic.com/og-image.jpg",
+        url: "http://maazelmusic.com/og-image.jpg",
         width: 800,
         height: 600,
         alt: "Maazel",
@@ -49,9 +49,9 @@ const config = {
   bioPicture1: "bioPic1.jpg",
   bioPicture2: "bioPic2.jpg",
   logoUrl: "logo.svg",
-  contactMail: "hugo@qatataq.com",
+  reversedContactMail: "moc.qatataq@lezaam+oguh",
   htmlTitle: "Maazel",
-  websiteUrl: "https://www.maazelmusic.com/",
+  websiteUrl: "https://maazelmusic.com/",
   SEO: SEO,
   theme: theme,
   links: {

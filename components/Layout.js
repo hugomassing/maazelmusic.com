@@ -61,6 +61,7 @@ const Layout = ({ refs, ...props }) => {
         <title>
           {config.htmlTitle} | {props.title}
         </title>
+        <link href="https://maazelmusic.com/" rel="canonical" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="google-site-verification"
