@@ -38,7 +38,7 @@ const Navigation = styled.div`
     width: 16px;
     height: 16px;
     background-color: #333;
-    background: url("static/cancel.svg");
+    background: url("/icons/cancel.svg");
     transform: rotate(45deg) scale(0.5);
   }
   :before {
@@ -104,7 +104,7 @@ const Header = ({ refs }) => {
   return (
     <Container>
       <Link href="/">
-        <Img src="static/Logo.svg" alt="logo" />
+        <Img src="/logo.svg" alt="logo" />
       </Link>
       <BarsMenu onClick={() => setHidden(hidden ? false : true)}>
         <FontAwesomeIcon height="32px" width="32px" icon={faBars} />

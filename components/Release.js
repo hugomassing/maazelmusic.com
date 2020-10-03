@@ -133,7 +133,11 @@ const ReleaseCard = (props) => {
   return (
     <Card>
       <Artwork big={big}>
-        <Img src={release.artworkUrl} big={big} />
+        <Img
+          src={release.artworkUrl}
+          big={big}
+          alt={`${release.title} - ${release.artist}`}
+        />
         <Overlay>
           <a href={release.streamUrl} target="_blank" rel="noopener noreferrer">
             <ActionButton>

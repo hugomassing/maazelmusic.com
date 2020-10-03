@@ -5,8 +5,9 @@ const releases = [
     year: "2020",
     label: "Monstercat",
     streamUrl: "https://monstercat.ffm.to/rightnow-mvr1",
-    artworkUrl: "static/Maazel_Right_Now_art.jpg",
-    audio: "",
+    artworkUrl:
+      "https://i1.sndcdn.com/artworks-10eTBQjHSj8dmTkc-JxPoGw-t500x500.jpg",
+    audio: "https://soundcloud.com/monstercat/maazel-glasscat-right-now",
   },
   {
     title: "Hurt Again",
