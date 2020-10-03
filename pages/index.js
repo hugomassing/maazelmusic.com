@@ -146,7 +146,6 @@ const Home = () => {
         <Pictures>
           <BioImg src={config.bioPicture1} alt="Maazel press picture" />
           <BioImg src={config.bioPicture2} alt="Maazel press picture" />
-          />
         </Pictures>
         <ContactMe ref={contactRef} href={`mailto:${config.contactMail}`}>
           <Button primary gradient>
