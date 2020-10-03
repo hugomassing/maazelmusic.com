@@ -13,7 +13,7 @@ const Card = styled.div`
 `;
 
 const Artwork = styled.div`
-  margin: 25px 50px;
+  margin: 25px 0px;
   width: ${(props) => (props.big ? "350px" : "250px")};
   height: ${(props) => (props.big ? "350px" : "250px")};
   position: relative;
@@ -65,7 +65,7 @@ const Infos = styled.div`
   font-size: 16px;
   display: flex;
   flex-direction: column;
-  width: ${(props) => (props.big ? "440px" : "340px")};
+  width: ${(props) => (props.big ? "100%" : "340px")};
 `;
 
 const ReleaseTitle = styled.span`

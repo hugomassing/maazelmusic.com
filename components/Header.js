@@ -28,6 +28,10 @@ const Navigation = styled.div`
     top: 0;
     margin-top: 48px;
     transition: opacity 0.5s ease-in-out;
+    :before,
+    :after {
+      display: none;
+    }
   }
 
   :before,
@@ -76,6 +80,7 @@ const A = styled.a`
     }
   }
 `;
+
 const Img = styled.img`
   width: 500px;
 
