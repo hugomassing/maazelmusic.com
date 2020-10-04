@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import LazyLoad from "react-lazyload";
 import { withSoundCloudAudio } from "react-soundplayer/addons";
 import styled from "styled-components";
 import { faPause, faPlay } from "@fortawesome/free-solid-svg-icons";
@@ -133,11 +134,13 @@ const ReleaseCard = (props) => {
   return (
     <Card>
       <Artwork big={big}>
-        <Img
-          src={release.artworkUrl}
-          big={big}
-          alt={`${release.title} - ${release.artist}`}
-        />
+        <LazyLoad width={big ? 350 : 250}>
+          <Img
+            src={release.artworkUrl}
+            big={big}
+            alt={`${release.title} - ${release.artist}`}
+          />
+        </LazyLoad>
         <Overlay>
           <a href={release.streamUrl} target="_blank" rel="noopener noreferrer">
             <ActionButton>
