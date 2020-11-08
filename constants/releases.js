@@ -1,5 +1,14 @@
 const releases = [
   {
+    title: "Memories EP",
+    artist: "Maazel",
+    year: "2020",
+    label: "Monstercat",
+    streamUrl: "https://monstercat.ffm.to/memories-ep-b9rd",
+    artworkUrl: "/memories_ep.jpg",
+    presave: true,
+  },
+  {
     title: "Right Now",
     artist: "Maazel feat. glasscat",
     year: "2020",
