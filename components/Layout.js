@@ -67,6 +67,7 @@ const Layout = ({ refs, ...props }) => {
           name="google-site-verification"
           content="Gn_ZwQWQS4QEL1lC4J32wR5VnEbDeCPNwe_nOssPUOM"
         />
+        <meta name="google-site-verification" content="y5mQGdLTZ1ehQL1Pw98x5hLCMLZSvUkHBx-yzchOKII" />
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link
           rel="icon"
