@@ -1,5 +1,15 @@
 const releases = [
   {
+    title: "Dead Inside",
+    artist: "Maazel",
+    year: "2021",
+    label: "Monstercat",
+    streamUrl: "https://monstercat.ffm.to/deadinside-ryeo",
+    artworkUrl:
+      "https://i1.sndcdn.com/artworks-RZvbTc6MBpPXyYhS-tIf86g-t500x500.jpg",
+    audio: "https://soundcloud.com/monstercat/maazel-dead-inside",
+  },
+  {
     title: "Memories EP",
     artist: "Maazel",
     year: "2020",
