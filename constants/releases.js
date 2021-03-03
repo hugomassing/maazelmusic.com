@@ -1,5 +1,15 @@
 const releases = [
   {
+    title: "Another Way",
+    artist: "Maazel",
+    year: "2021",
+    label: "Monstercat",
+    streamUrl: "https://monstercat.ffm.to/anotherway-oogv",
+    artworkUrl:
+      "https://i1.sndcdn.com/artworks-XzZwIE4zJyQkvzYZ-lSlQnQ-t500x500.jpg",
+    audio: "https://soundcloud.com/monstercat/maazel-another-way",
+  },
+  {
     title: "Dead Inside",
     artist: "Maazel",
     year: "2021",
