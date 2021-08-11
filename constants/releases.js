@@ -1,5 +1,15 @@
 const releases = [
   {
+    title: "Everybody Feels",
+    artist: "ARMNHMR & Maazel feat. Zack Gray",
+    year: "2021",
+    label: "Dim Mak",
+    streamUrl: "https://ffm.to/everybodyfeels",
+    artworkUrl:
+      "https://i1.sndcdn.com/artworks-SbNOHUTKN1l9SWc4-P4eWIQ-t500x500.jpg",
+    audio: "https://soundcloud.com/armnhmr/everybodyfeels",
+  },
+  {
     title: "Another Way",
     artist: "Maazel",
     year: "2021",
