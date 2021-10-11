@@ -1,5 +1,35 @@
 const releases = [
   {
+    title: "Crashing Down",
+    artist: "Maazel",
+    year: "2021",
+    label: "Monstercat",
+    streamUrl: "https://monster.cat/crashingdown",
+    artworkUrl:
+      "https://i1.sndcdn.com/artworks-V8LtD7N1uxFu1Ggi-c21EFg-t500x500.jpg",
+    audio: "https://soundcloud.com/monstercat/maazel-crashing-down",
+  },
+  {
+    title: "Not Me (feat. Madalen Duke)",
+    artist: "So Sus & Maazel",
+    year: "2021",
+    label: "Monstercat",
+    streamUrl: "https://monster.cat/notme",
+    artworkUrl:
+      "https://i1.sndcdn.com/artworks-Ihq1cn5zweQExhvQ-jVyvqw-t500x500.jpg",
+    audio: "https://soundcloud.com/monstercat/so-sus-maazel-not-me-feat-madalen-duke",
+  },
+  {
+    title: "Remember (Maazel Remix)",
+    artist: "WE ARE FURY & emlyn",
+    year: "2021",
+    label: "Create Music Group",
+    streamUrl: "https://wearefury.lnk.to/RememberMaazel",
+    artworkUrl:
+      "https://i1.sndcdn.com/artworks-052zy9C6YcpKamVK-bixykA-t500x500.jpg",
+    audio: "https://soundcloud.com/maazelbeats/we-are-fury-emlyn-remember-maazel-remix",
+  },
+  {
     title: "Everybody Feels",
     artist: "ARMNHMR & Maazel feat. Zack Gray",
     year: "2021",
