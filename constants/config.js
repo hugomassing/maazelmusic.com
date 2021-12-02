@@ -49,7 +49,7 @@ const config = {
   bioPicture1: "bioPic1.jpg",
   bioPicture2: "bioPic2.jpg",
   logoUrl: "logo.svg",
-  reversedContactMail: "moc.qatataq@lezaam+oguh",
+  reversedContactMail: "moc.cisumlezaam@tcatnoc",
   htmlTitle: "Maazel",
   websiteUrl: "https://maazelmusic.com/",
   SEO: SEO,
