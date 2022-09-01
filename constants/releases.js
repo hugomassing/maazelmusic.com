@@ -1,5 +1,15 @@
 const releases = [
   {
+    title: "Mirrors",
+    artist: "Maazel, Darby & BELELA",
+    year: "2022",
+    label: "Monstercat",
+    streamUrl: "https://monster.cat/mirrors",
+    artworkUrl:
+      "https://i1.sndcdn.com/artworks-e2be8xXdiKX4fbXb-1oGvCA-t500x500.jpg",
+    audio: "https://soundcloud.com/monstercat/maazel-darby-mirrors-feat-belela",
+  },
+  {
     title: "The Truth",
     artist: "Maazel & Sam Lamar",
     year: "2021",
