@@ -1,5 +1,15 @@
 const releases = [
   {
+    title: "Say Less (Maazel Remix)",
+    artist: "Puppet",
+    year: "2022",
+    label: "-",
+    streamUrl: "https://ffm.to/newyorkfamilyoverdrive",
+    artworkUrl:
+      "https://i1.sndcdn.com/artworks-yDn9yh3LI0HeUR5C-zhiLsQ-t500x500.jpg",
+    audio: "https://soundcloud.com/puppet/say-less-maazel-remix",
+  },
+  {
     title: "Mirrors",
     artist: "Maazel, Darby & BELELA",
     year: "2022",
