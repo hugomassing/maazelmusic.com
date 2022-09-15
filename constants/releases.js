@@ -3,7 +3,7 @@ const releases = [
     title: "Say Less (Maazel Remix)",
     artist: "Puppet",
     year: "2022",
-    label: "-",
+    label: "Self-released",
     streamUrl: "https://ffm.to/newyorkfamilyoverdrive",
     artworkUrl:
       "https://i1.sndcdn.com/artworks-yDn9yh3LI0HeUR5C-zhiLsQ-t500x500.jpg",
