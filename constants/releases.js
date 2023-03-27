@@ -1,5 +1,15 @@
 const releases = [
   {
+    title: "Nobody",
+    artist: "Slippy & Maazel",
+    year: "2023",
+    label: "NIGHTMODE",
+    streamUrl: "https://nm.fanlink.to/NobodyWhiteNoise",
+    artworkUrl:
+      "https://i1.sndcdn.com/artworks-1CDzWz23rIrA8yMa-SPzqlg-t500x500.jpg",
+    audio: "https://soundcloud.com/nightmoderecs/nobody",
+  },
+  {
     title: "Say Less (Maazel Remix)",
     artist: "Puppet",
     year: "2022",
