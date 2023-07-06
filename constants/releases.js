@@ -1,5 +1,15 @@
 const releases = [
   {
+    title: "Fallin 4 u",
+    artist: "Maazel",
+    year: "2023",
+    label: "Self-Released",
+    streamUrl: "https://fanlink.to/fallin-4-u",
+    artworkUrl:
+      "https://i1.sndcdn.com/artworks-EODTQKVQ1aZIdxf0-4xGybQ-t500x500.jpg",
+    audio: "https://soundcloud.com/maazelbeats/fallin-4-u",
+  },
+  {
     title: "Nobody",
     artist: "Slippy & Maazel",
     year: "2023",
