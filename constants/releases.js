@@ -1,5 +1,25 @@
 const releases = [
   {
+    title: "The Edge (feat. Haley Maze)",
+    artist: "Egzod & Maazel",
+    year: "2023",
+    label: "Lost In Dreams",
+    streamUrl: "https://lostindreams.co/Collide",
+    artworkUrl:
+      "https://i1.sndcdn.com/artworks-WAx386MPSwqNTVtA-2QrDzA-t500x500.jpg",
+    audio: "https://soundcloud.com/itslostindreams/egzod-maazel-haley-maze-the-edge-feat-haley-maze-1",
+  },
+  {
+    title: "This Feeling",
+    artist: "Maazel",
+    year: "2023",
+    label: "Self-Released",
+    streamUrl: "https://fanlink.to/maazel-this-feeling",
+    artworkUrl:
+      "https://i1.sndcdn.com/artworks-oySlStTdn8K7LBe0-AJOekQ-t500x500.jpg",
+    audio: "https://soundcloud.com/maazelbeats/this-feeling",
+  },
+  {
     title: "Fallin 4 u",
     artist: "Maazel",
     year: "2023",
