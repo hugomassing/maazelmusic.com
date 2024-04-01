@@ -1,5 +1,15 @@
 const releases = [
   {
+    title: "Apex",
+    artist: "CORTR & Maazel",
+    year: "2024",
+    label: "Awakening Records",
+    streamUrl: "https://fanlink.tv/ac01",
+    artworkUrl:
+      "https://i1.sndcdn.com/artworks-OZxwHHa0ULb4oDvO-AXynEw-t500x500.jpg",
+    audio: "https://soundcloud.com/awakening_records/cortr-maazel-collab-v8",
+  },
+  {
     title: "The Edge (feat. Haley Maze)",
     artist: "Egzod & Maazel",
     year: "2023",
