@@ -1,5 +1,15 @@
 const releases = [
   {
+    title: "On My Own (feat. BELELA)",
+    artist: "Maazel",
+    year: "2024",
+    label: "Self-released",
+    streamUrl: "https://fanlink.tv/on-my-own-feat-belela",
+    artworkUrl:
+      "https://i1.sndcdn.com/artworks-ejsT8fFuhZkqgVtw-CBFrgg-t500x500.jpg",
+    audio: "https://soundcloud.com/maazelbeats/on-my-own-feat-belela",
+  },
+  {
     title: "Apex",
     artist: "CORTR & Maazel",
     year: "2024",
@@ -7,7 +17,7 @@ const releases = [
     streamUrl: "https://fanlink.tv/ac01",
     artworkUrl:
       "https://i1.sndcdn.com/artworks-OZxwHHa0ULb4oDvO-AXynEw-t500x500.jpg",
-    audio: "https://soundcloud.com/awakening_records/cortr-maazel-collab-v8",
+    audio: "https://soundcloud.com/awakening_records/cortr-maazel-apex",
   },
   {
     title: "The Edge (feat. Haley Maze)",
