@@ -1,5 +1,15 @@
 const releases = [
   {
+    title: "Take Me Away",
+    artist: "Maazel",
+    year: "2024",
+    label: "Self-released",
+    streamUrl: "https://fanlink.tv/maazel-take-me-away",
+    artworkUrl:
+      "https://i1.sndcdn.com/artworks-yyaGXgTdIvzJE1XD-Rr73dw-t500x500.jpg",
+    audio: "https://soundcloud.com/maazelbeats/take-me-away",
+  },
+  {
     title: "On My Own (feat. BELELA)",
     artist: "Maazel",
     year: "2024",
